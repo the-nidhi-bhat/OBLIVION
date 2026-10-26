@@ -368,6 +368,19 @@ export function reset() {
   announce();
 }
 
+const VISIT_KEY = 'oblivion.v3.visit';
+
+/** True when this browser session has already opened the archive. Survives reset. */
+export function markVisit() {
+  try {
+    const before = sessionStorage.getItem(VISIT_KEY) === '1';
+    sessionStorage.setItem(VISIT_KEY, '1');
+    return before;
+  } catch (err) {
+    return false;
+  }
+}
+
 /** The contextual ECHO line: same authored set, chosen by real progress. */
 export function echoLine(chapter) {
   const set = ECHO_LINES[chapter] || ECHO_LINES[1];

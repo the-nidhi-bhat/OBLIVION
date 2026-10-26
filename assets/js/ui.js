@@ -7,7 +7,7 @@ import {
   FRAGMENTS, ORDER, ENDINGS, has, recover, count, snapshot,
   setChoice, confirmEnding, reset, echoLine, journalEcho,
   record, markSeen, journalState, contradiction, linkPair, isLinked, proven, eggSeen,
-  ECHO_FIRST_WRITE,
+  ECHO_FIRST_WRITE, markVisit,
 } from './story.js';
 import { setEnding } from './scene.js';
 
@@ -20,7 +20,11 @@ const endingScreen = $('[data-ending-screen]');
 const echoStrip = $('[data-echo]');
 const echoLineEl = $('[data-echo-line]');
 
-const ui = { split: 0, opened: null, journalOpen: false, ending: null, echoTimer: 0 };
+const ui = { split: 0, opened: null, journalOpen: false, ending: null, echoTimer: 0, resolveTimer: 0, returning: false };
+const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* known before the scroll engine emits its first chapter event */
+ui.returning = markVisit();
 window.__ui = ui;
 
 /* ── typography: split a title into animatable letters ─────────────── */
@@ -82,8 +86,13 @@ photoBtn?.addEventListener('click', () => setPhoto(!photo.classList.contains('is
 function openEvidence(id) {
   const data = record(id);
   if (!data || !evidencePanel) return;
+  const fresh = Boolean(FRAGMENTS[id]) && !has(id);
   if (FRAGMENTS[id] && !has(id)) recover(id);
   if (FRAGMENTS[id]) markSeen(id);
+  if (fresh) {
+    window.dispatchEvent(new CustomEvent('story:discovery', { detail: { id } }));
+    try { navigator.vibrate?.(12); } catch (err) { /* haptics are optional */ }
+  }
 
   $('[data-evidence-tag]').textContent = data.tag;
   $('[data-evidence-title]').textContent = data.title;
@@ -414,6 +423,8 @@ function showEnding(key) {
 
   document.body.dataset.ending = key;
   document.body.classList.add('is-ending');
+  document.body.classList.remove('is-restoring', 'is-erasing', 'is-rewriting');
+  document.body.classList.add(key === 'restore' ? 'is-restoring' : key === 'erase' ? 'is-erasing' : 'is-rewriting');
   setEnding(key);
   endingScreen.hidden = false;
   document.getElementById('story')?.setAttribute('inert', '');
@@ -442,13 +453,21 @@ function say(text, hold = 6200, opts = {}) {
   // event must not overwrite it mid-typing
   if (ghost.stage === 'typing' || ghost.stage === 'withheld') return;
   if (!echoStrip || !echoLineEl) return;
+  const lie = Boolean(opts.lie);
   echoLineEl.textContent = text;
   echoStrip.classList.add('is-live');
   echoStrip.classList.remove('is-typing', 'is-withheld');
-  const lie = Boolean(opts.lie);
   echoLineEl.classList.toggle('is-corrupt', lie);
   if (lie) echoLineEl.setAttribute('data-ghost', ghostText(text));
   else echoLineEl.removeAttribute('data-ghost');
+  // the signal resolves into legibility; lies skip it, because lies arrive clean
+  clearTimeout(ui.resolveTimer);
+  echoLineEl.classList.remove('is-resolving');
+  if (!lie && !reducedMotion()) {
+    void echoLineEl.offsetWidth;
+    echoLineEl.classList.add('is-resolving');
+    ui.resolveTimer = window.setTimeout(() => echoLineEl.classList.remove('is-resolving'), 560);
+  }
   clearTimeout(ui.echoTimer);
   ui.echoTimer = window.setTimeout(() => echoStrip.classList.remove('is-live'), hold);
 }
@@ -504,7 +523,7 @@ const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 let ring = null;
 
 function enableCursor() {
-  if (!finePointer.matches || ring) return;
+  if (!finePointer.matches || ring || reducedMotion()) return;
   ring = document.createElement('div');
   ring.className = 'cursor-ring';
   ring.setAttribute('aria-hidden', 'true');
@@ -521,6 +540,9 @@ function enableCursor() {
     rx += (x - rx) * 0.22;
     ry += (y - ry) * 0.22;
     ring.style.transform = `translate3d(${rx.toFixed(1)}px, ${ry.toFixed(1)}px, 0)`;
+    // the reticle is also the light source for panel illumination
+    document.documentElement.style.setProperty('--mx', `${rx.toFixed(1)}px`);
+    document.documentElement.style.setProperty('--my', `${ry.toFixed(1)}px`);
     if (Math.abs(x - rx) > 0.3 || Math.abs(y - ry) > 0.3) {
       frame = requestAnimationFrame(loop);
     } else {
@@ -534,9 +556,18 @@ function enableCursor() {
     ring.classList.add('is-on');
     if (!running) { running = true; frame = requestAnimationFrame(loop); }
   };
+  let stutterTimer = 0;
   const onOver = (event) => {
     const hot = event.target.closest('a, button, [role="button"], dialog, .fragment__btn');
     ring.classList.toggle('is-hot', Boolean(hot));
+    // near corrupted content the reticle stutters; the native cursor never moves
+    if (event.target.closest('.is-corrupt, [data-corrupt]')) {
+      ring.classList.remove('is-stutter');
+      void ring.offsetWidth;
+      ring.classList.add('is-stutter');
+      clearTimeout(stutterTimer);
+      stutterTimer = window.setTimeout(() => ring.classList.remove('is-stutter'), 220);
+    }
   };
   window.addEventListener('pointermove', onMove, { passive: true });
   window.addEventListener('pointerover', onOver, { passive: true });
@@ -544,6 +575,23 @@ function enableCursor() {
 }
 
 /* ── wiring that depends on scroll/story events ────────────────────── */
+
+/* The photograph cracks at chapter 3 → 4. The cut line carries the eye
+   through the fracture; it is a directional wipe, not a true object morph. */
+const seamCut = $('[data-seam-cut]');
+let cutTimer = 0;
+let lastChapter = Number(document.body.dataset.chapter || 1) || 1;
+
+function chapterCut(from, to) {
+  if (!seamCut || reducedMotion()) return;
+  if (!((from === 3 && to === 4) || (from === 4 && to === 3))) return;
+  seamCut.dataset.dir = to > from ? 'forward' : 'back';
+  seamCut.classList.remove('is-on');
+  void seamCut.offsetWidth;
+  seamCut.classList.add('is-on');
+  clearTimeout(cutTimer);
+  cutTimer = window.setTimeout(() => seamCut.classList.remove('is-on'), 900);
+}
 
 window.addEventListener('story:change', () => {
   syncEvidenceUi();
@@ -553,6 +601,10 @@ window.addEventListener('story:change', () => {
 
 window.addEventListener('scroll:chapter', (event) => {
   const chapter = event.detail.chapter;
+  if (chapter !== lastChapter) {
+    chapterCut(lastChapter, chapter);
+    lastChapter = chapter;
+  }
   if (chapter === 4) {
     // one voice owns this beat: no later chapter event may overwrite the ghost
     if (!ghost.played) ghostSequence();
@@ -565,7 +617,11 @@ window.addEventListener('scroll:chapter', (event) => {
       clearTimeout(ui.echoTimer);
       echoStrip?.classList.remove('is-typing', 'is-withheld');
     }
-    say(echoLine(chapter));
+    if (chapter === 1 && ui.returning && count() === 0) {
+      say('ECHO: You came back. The archive did not expect that.');
+    } else {
+      say(echoLine(chapter));
+    }
   }
   if (chapter === 3 && photo && !photo.classList.contains('is-flipped')) {
     // the photograph turns at its story beat, and can be turned back by hand
@@ -584,6 +640,7 @@ export function initUi() {
   syncEvidenceUi();
   syncChoice();
   enableCursor();
+  /* visit flag was captured at module load, before any chapter event */
   ui.ghost = ghost.stage;
   const s = snapshot();
   if (s.ending) {
