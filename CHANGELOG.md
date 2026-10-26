@@ -1,8 +1,26 @@
 # Changelog
 
-OBLIVION was built and verified over three passes before publication. Because the repository was created at the end of that work, this file records the passes rather than pretending they were separate public releases.
+OBLIVION was built and verified over three passes before publication and a fourth afterwards. Because the repository was created at the end of that work, this file records the passes rather than pretending they were separate public releases.
 
 Dates are the working dates of the acceptance copies.
+
+## v4 — interface layer and room tone (2026-10-26)
+
+### Added
+- `assets/js/audio.js`: opt-in Web Audio room tone (three oscillators, one lowpass, two semitones darker per chapter), one discovery chime, and ending cues. No assets, no network, no autoplay; off until the HUD toggle is pressed.
+- Fine-pointer retrieval reticle with a centre pip, panel illumination driven by `--mx`/`--my`, and a 220 ms stutter over corrupted content.
+- ECHO clean-line resolve reveal (560 ms blur/letter-spacing settle), skipped under reduced motion.
+- Chapter 3↔4 fracture cut overlay that reverses on the way back, skipped under reduced motion.
+- Return-visit line stored in `oblivion.v3.visit`, outside the resettable session, spoken only while nothing has been collected.
+- One discovery event per record, a 12 ms `navigator.vibrate` where supported, and per-ending interface treatments (restore settle, erase stagger, rewrite rebuild).
+- 17 v4 acceptance checks (sound, discovery, reticle, resolve, cut, return visit, ending treatments); total now 156.
+
+### Fixed
+- The return-visit flag was captured after the scroll engine had already emitted chapter 1; `markVisit()` now runs at module load.
+- The ending-treatment check filtered body classes with a prefix that excluded `is-erasing`; the filter now covers every `is-*` state.
+
+### Changed
+- README, testing, architecture, design-system, development and changelog documents updated for v4; the acceptance report records 156/156.
 
 ## Unreleased — publication preparation (2026-10-26)
 

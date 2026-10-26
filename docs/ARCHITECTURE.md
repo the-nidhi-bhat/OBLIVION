@@ -15,6 +15,7 @@ index.html
 └─ assets/js/main.js          <script type="module">
    ├─ imports intro.js        boot sequence (side effects)
    ├─ imports system.js       clocks, anomaly, fringe, watches (side effects)
+   ├─ imports audio.js        optional synthesised room tone (side effects)
    ├─ imports scene.js        WebGL1 renderer + setScroll/setEnding
    ├─ imports scroll.js       chapter/progress engine
    ├─ imports ui.js           evidence, journal, ECHO, hold, ending chrome
@@ -38,6 +39,7 @@ will not load them.
 | `scene.js` | WebGL1 context, shaders, geometry, per-chapter uniforms, fallback surface, DPR cap | DOM UI |
 | `story.js` | Records, contradictions, ending copy, session snapshot, sanitisation, persistence | DOM, timing |
 | `system.js` | Session/archive clocks, one-time anomaly, corruption level, scroll velocity, watch proximity | Story decisions |
+| `audio.js` | Web Audio drone, per-chapter tuning, discovery chime, ending cues, consent toggle | Story decisions, DOM |
 | `ui.js` | Evidence dialog, journal, compare, scrubber, ECHO strip, ghost beat, hold engine, seam, ending presentation | Renderer |
 
 The split is deliberate: `story.js` is pure data plus storage, so the narrative
@@ -188,3 +190,16 @@ Keep these invariants:
 3. storage is untrusted input;
 4. every new interactive control gets an accessible name and a keyboard path;
 5. every new animation gets a reduced-motion branch.
+## Audio path (v4)
+
+`audio.js` is a side-effect module imported after `system.js`. It constructs
+nothing until the visitor presses Sound, so no `AudioContext` exists on load and
+nothing can autoplay. It listens for `scroll:chapter` (retunes the drone two
+semitones darker per chapter), `story:discovery` (one chime per newly collected
+record) and `story:ending` (restore warms the tone, erase fades and suspends the
+context, rewrite retunes). The context is closed on `pagehide`.
+
+There are no audio assets and no network requests: three sine oscillators feed a
+lowpass filter and a master gain. `window.__audio` exposes the same state the
+harness asserts (supported, constructed, enabled, context state, chapter, cue
+counts, reduced-motion flag).

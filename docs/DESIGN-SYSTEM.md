@@ -91,7 +91,7 @@ decorative.
 | ≤560 | Phone type scale, stacked controls, journal becomes a list |
 | ≤420 | Minimal padding, shortened metadata, one-column ledger |
 
-Coarse pointers and `(hover: none)` remove the custom cursor ring entirely.
+Coarse pointers and `(hover: none)` remove the custom cursor ring entirely; reduced motion does the same and keeps the native pointer.
 
 ---
 
@@ -104,6 +104,9 @@ Coarse pointers and `(hover: none)` remove the custom cursor ring entirely.
 | Velocity fringe | `system.js` | > 0.9 px/ms, cleared after 240 ms |
 | Impossible timestamp | `system.js` | appears at ch1 p ≥ 0.88, holds 1,800 ms, reverts |
 | Hold to commit | `ui.js` | 1,500 ms; fill via `--hold` |
+| Resolve reveal | `ui.js` | 560 ms blur/letter-spacing settle; skipped under reduced motion |
+| Fracture cut (3↔4) | `ui.js` + CSS | 860 ms sweep, reverses on the way back; skipped under reduced motion |
+| Retrieval reticle | `ui.js` + CSS | follows per frame; 220 ms stutter over corrupt content |
 | Dialog open/close | CSS | 180–260 ms, `--ease` |
 | Ending reveal | CSS | staggered rows via `--i` |
 
@@ -214,3 +217,16 @@ equivalent. Disabled is used only where the action is genuinely unavailable
 - animate a property two systems already own;
 - hide content on mobile without an equivalent;
 - introduce a webfont or icon set for a handful of glyphs.
+## Sound (v4)
+
+Sound is a separate, opt-in channel and never a decorative default.
+
+- Off on load; no `AudioContext` is constructed until the visitor presses Sound.
+- Three sine partials (55 / 82.5 / 110 Hz) through a 320 Hz lowpass form the room
+  tone; each chapter lowers it by two semitones.
+- One discovery cue: a warm triangle chime, once per newly collected record.
+- Restore warms the master; erase fades it out and suspends the context; rewrite
+  retunes it. Nothing is sampled and nothing is downloaded.
+- The HUD toggle states its own condition (`Sound off` / `Sound on`, with
+  `aria-pressed`), and reduced motion does not mute the story — it only removes
+  motion.

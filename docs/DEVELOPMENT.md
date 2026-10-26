@@ -40,7 +40,7 @@ python tools\qa.py
 
 The harness starts nothing by itself — keep the server running in another terminal. It writes `reports/results.json` and screenshots into `reports/screens/`. See [`TESTING.md`](TESTING.md) for check groups, known timing constraints, and how to add a check.
 
-Current state: **139 checks, 139 pass, 0 fail, 0 not tested** (Chromium 153). Results are a snapshot of one machine; they are evidence, not a guarantee.
+Current state: **156 checks, 156 pass, 0 fail, 0 not tested** (Chromium 153). Results are a snapshot of one machine; they are evidence, not a guarantee.
 
 ## Where things live
 
@@ -52,6 +52,7 @@ Current state: **139 checks, 139 pass, 0 fail, 0 not tested** (Chromium 153). Re
 | WebGL scene, camera, palette, fallback | `assets/js/scene.js` |
 | Intro sequence | `assets/js/intro.js` |
 | Clocks, anomaly, corruption level, velocity fringe, watching windows | `assets/js/system.js` |
+| Optional room tone, chapter tuning, discovery chime, ending cues | `assets/js/audio.js` |
 | Wiring, public debug API, version | `assets/js/main.js` |
 | Structure and section markup | `index.html` |
 | Base visual system | `assets/css/main.css` |
@@ -124,7 +125,7 @@ git status --short
 git diff --check
 node --check assets\js\ui.js; node --check assets\js\story.js; node --check assets\js\main.js
 python -m py_compile tools\qa.py
-python tools\qa.py            # server running, expect 139/139
+python tools\qa.py            # server running, expect 156/156
 git diff --cached            # read it
 ```
 

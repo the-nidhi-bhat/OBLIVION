@@ -41,23 +41,23 @@ Exit status is non-zero when any check fails or is not tested.
 ## Latest run
 
 ```
-checks 139 | PASS 139 | FAIL 0 | NOT TESTED 0
+checks 156 | PASS 156 | FAIL 0 | NOT TESTED 0
 ```
 
 - 26 October 2026, Chromium 153.0.8010.12 (Playwright Python), headless,
   `--enable-gpu --ignore-gpu-blocklist --use-angle=d3d11`.
 - CLS **0.0176** (positive control 0.2083, budget 0.1).
 - DPR device 3 → capped at 2 (780 px canvas at 390 CSS px).
-- Frame rate sample: **35 fps** (single 1-second count on Intel UHD via
+- Frame rate sample: **47 fps** (single 1-second count on Intel UHD via
   ANGLE/D3D11).
-- 51 screenshots captured; no console errors, page errors, failed requests or
+- 53 screenshots captured; no console errors, page errors, failed requests or
   4xx/5xx in any pass.
 
-The previous build (v2) passed 110 checks; the v3 additions are listed below.
+The v2 build passed 110 checks and v3 passed 139; the v4 interface pass adds 17. All sets are listed below.
 
 ---
 
-## What is covered (139 checks)
+## What is covered (156 checks)
 
 | Group | Count | What it proves |
 |---|---|---|
@@ -75,6 +75,7 @@ The previous build (v2) passed 110 checks; the v3 additions are listed below.
 | journal | 2 | Journal lists recovered memories; ECHO's journal line tracks count |
 | v3 | 19 | Clocks, one-time anomaly, velocity fringe, ghost beat and its error-free run, scene words, pointer-proximity windows, compare (contradiction + no-thread), scrubber (keyboard, window, predates), seam (uncounted, focus, persistence), corruption + proof cleanup, hold cancel/commit/keyboard/alternative |
 | v3-mobile | 3 | HUD counters fit; withheld transmission visible; no console errors |
+| v4 | 17 | Sound starts off and toggles without autoplay; discovery cue and haptic fire once; reticle only on fine pointers; resolve reveal appears and clears; fracture cut both directions; return-visit line; per-ending treatments and cues |
 | ending-restore / erase / rewrite | 6 each | Title/body/ledger; world state; focus containment; review without losing the ending; focus return; restart clears and replays |
 | endings | 1 | Three endings are substantially different outcomes |
 | reduced | 8 | No decorative loop; no long animations; pinning and scrubbed transforms removed; all lines readable; smooth scroll off; withheld shown without typing and no fringe; a decision still works; no errors |
@@ -101,7 +102,7 @@ These are stated as gaps, not as passes:
   vision model; composition claims rest on measured geometry, contrast and copy.
 - **Animation libraries.** None are installed or used (GSAP, ScrollTrigger,
   Three.js, Lenis). Anything attributed to them is out of scope.
-- **Audio.** The project ships no sound.
+- **Audio quality.** The room tone is synthesised from oscillators and was not auditioned on speakers or headphones; only its state machine (off by default, toggle, cues) is tested. Haptics were checked against a stubbed `navigator.vibrate`, not on a device.
 
 Additional limits of the harness itself:
 

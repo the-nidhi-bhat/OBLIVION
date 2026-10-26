@@ -77,8 +77,12 @@ agree return `NO THREAD` rather than a fabricated conclusion.
 2197-01, marks which records fall inside the window and which predate ECHO's
 first write, and updates the journal live.
 
+**A room tone you opt into.** Sound is synthesised in the browser with the Web Audio API — a low drone that darkens two semitones per chapter, one warm discovery chime, and endings that warm, delete or rewrite the tone. It is off until you press Sound, nothing is downloaded, and nothing autoplays.
+
 **A seam.** Something sits behind the photograph that is not one of the five
 memories. It is authored, findable, and deliberately not counted as evidence.
+
+**An interface that reads the room.** On a fine pointer, a thin retrieval reticle follows the cursor, lights the panel beneath it and stutters over corrupted content. Clean ECHO lines resolve out of blur; a fracture sweeps the screen between chapters 3 and 4 and reverses on the way back. Touch devices get none of it. The archive also records a return visit outside the resettable session, and ECHO answers it only when nothing has been collected yet.
 
 **Tactile commitment.** The final choice is a held gesture: press and hold the
 control, or hold Enter/Space, for 1.5 seconds. Releasing, leaving, blurring or
@@ -158,6 +162,8 @@ The full authored detail lives in [docs/STORY-BIBLE.md](docs/STORY-BIBLE.md).
   render loop, DPR capped at 2.
 - **sessionStorage** for tab-scoped memory (`oblivion.v3.session`), versioned and
   sanitised on read.
+- **Web Audio API** for the optional room tone. Oscillators and gain nodes only:
+  no samples, no audio files, no library.
 - **Playwright for Python** in the acceptance harness only. The site itself does
   not import or require it.
 - System fonts only: `Segoe UI`/system sans, `Georgia` serif, `ui-monospace`.
@@ -177,6 +183,7 @@ flowchart TD
     MAIN --> UI[ui.js<br/>evidence, journal, ECHO, hold, endings]
     MAIN --> SYSTEM[system.js<br/>clocks, anomaly, fringe, watches]
     MAIN --> STORY[story.js<br/>records, session state, endings]
+    MAIN --> AUDIO[audio.js<br/>synthesised room tone]
     SCROLL --> SCENE[scene.js<br/>WebGL1 renderer]
     SCROLL -- "scroll:chapter" --> UI
     MAIN -- "__oblivion:progress" --> UI
@@ -258,7 +265,7 @@ Screenshots are intentionally not committed; a curated set lives in
 **Latest run — 26 October 2026**
 
 ```
-checks 139 | PASS 139 | FAIL 0 | NOT TESTED 0
+checks 156 | PASS 156 | FAIL 0 | NOT TESTED 0
 ```
 
 - Chromium 153.0.8010.12 via Playwright, headless, GPU flags
@@ -267,7 +274,7 @@ checks 139 | PASS 139 | FAIL 0 | NOT TESTED 0
 - Cumulative layout shift: **0.0176** (the positive control probe scores 0.2083,
   so the measurement is live). Budget: 0.1.
 - Renderer DPR: device 3 → capped at **2** (780 px canvas at 390 CSS px).
-- Frame rate: **35 fps measured** in one 1-second sample on Intel UHD via
+- Frame rate: **47 fps measured** in one 1-second sample on Intel UHD via
   ANGLE/D3D11. Reported, not promised.
 - No console errors, page errors, failed requests or 4xx/5xx in any pass.
 
@@ -327,9 +334,10 @@ OBLIVION/
 │     ├─ scene.js             # WebGL1 renderer and shaders
 │     ├─ story.js             # records, contradictions, endings, session state
 │     ├─ system.js            # clocks, anomaly, corruption, fringe, watches
+│     ├─ audio.js             # optional synthesised room tone (Web Audio)
 │     └─ ui.js                # evidence, journal, ECHO, hold, ending chrome
 ├─ tools/
-│  └─ qa.py                   # 139-check acceptance harness (Playwright)
+│  └─ qa.py                   # 156-check acceptance harness (Playwright)
 ├─ reports/
 │  ├─ acceptance-report.md    # latest acceptance run, human readable
 │  └─ results.json            # machine-readable evidence
@@ -364,7 +372,12 @@ OBLIVION/
 - **Chromium only** in the acceptance evidence. Firefox and WebKit are untested.
 - **No visual review by a human or vision model** was performed on the
   screenshots; composition claims rest on measured geometry, contrast and copy.
-- **No audio.** The project ships no sound and no audio asset.
+- **Synthesised audio only.** The room tone is generated from oscillators. There
+  is no soundtrack, no sampled asset, and no listening test on real speakers or
+  headphones. Haptics were exercised against a stubbed `navigator.vibrate` only.
+- **No magnetic cursor pull.** The reticle expands and illuminates, but never
+  pulls the pointer toward a target; that was deliberate, to keep targeting
+  predictable.
 - **No animation library.** GSAP, ScrollTrigger, Three.js, Lenis and similar are
   absent by design; any behaviour attributed to them does not exist here.
 - The journal's `discovered` state exists in the state machine but is not
@@ -408,14 +421,18 @@ Completed in this build:
 - journal states, two-record comparison, contradictions, date scrubber;
 - hold-to-commit with a keyboard path and a single-press alternative;
 - reduced-motion mode and responsive layouts down to 320 px;
-- 139-check acceptance harness with screenshots and JSON evidence.
+- optional synthesised room tone, discovery cue and ending-scored silence;
+- retrieval reticle, panel illumination, corruption stutter and resolve reveal;
+- the chapter 3↔4 fracture cut, return-visit line, haptic discovery tick;
+- per-ending interface treatments for restore, erase and rewrite;
+- 156-check acceptance harness with screenshots and JSON evidence.
 
 Planned, not built:
 
 - Firefox and WebKit verification;
 - a real screen-reader pass and forced-colors audit;
 - axe-core/Lighthouse in CI;
-- audio design, if an asset and a licence are chosen;
+- a licensed soundtrack or sampled ambience, if one is chosen;
 - a confirmation step for the HUD replay control;
 - recomputing pointer-proximity effects after scroll and bfcache restore.
 
@@ -425,8 +442,9 @@ Planned, not built:
 
 Written, designed and built by **Nidhi Bhat**.
 
-No third-party fonts, images, audio, textures, models, libraries or APIs are
-included. The renderer, the story, the design system and the test harness are
+No third-party fonts, images, sampled audio, textures, models, libraries or APIs
+are included. The room tone is synthesised at runtime from oscillators. The
+renderer, the story, the design system and the test harness are
 original to this project. Playwright is used only to run acceptance tests and is
 not part of the shipped site.
 
