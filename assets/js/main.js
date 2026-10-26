@@ -6,6 +6,7 @@
 
 import './intro.js';
 import './system.js';
+import './audio.js';
 import { setScroll, setEnding } from './scene.js';
 import { initScroll, goToScene, scrollState } from './scroll.js';
 import { initUi, showEnding, openJournal, restart } from './ui.js';

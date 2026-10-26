@@ -23,6 +23,7 @@
 <div class="world-fog" aria-hidden="true"></div>
 <div class="world-grain" aria-hidden="true"></div>
 <div class="world-vignette" aria-hidden="true"></div>
+<div class="seam-cut" data-seam-cut aria-hidden="true"></div>
 
 <!-- ───────────────────────── HUD ───────────────────────── -->
 <header class="hud" data-hud>
@@ -55,6 +56,7 @@
     <button class="chip" type="button" data-journal-open aria-haspopup="dialog">
       Evidence <span class="chip__count" data-evidence-count>0</span>
     </button>
+    <button class="chip chip--ghost chip--sound" type="button" data-sound-toggle aria-pressed="false" aria-label="Sound off — generated in your browser">Sound <span class="chip__state" data-sound-label>off</span></button>
     <button class="chip chip--ghost" type="button" data-replay>Replay</button>
   </div>
 </header>
@@ -99,7 +101,7 @@
       <button class="btn btn--quiet" type="button" data-intro-skip>Skip sequence</button>
     </div>
 
-    <p class="boot__fine">Everything here runs locally. No audio, no trackers, no network requests. Nothing is downloaded.</p>
+    <p class="boot__fine">Everything here runs locally. No trackers, no network requests, nothing downloaded. Sound stays off until you switch it on.</p>
   </div>
 </section>
 
@@ -450,7 +452,7 @@
 </main>
 
 <footer class="colophon">
-  <p>OBLIVION — an interactive fiction built with hand-written WebGL, CSS and vanilla JavaScript. No libraries, no network requests, no audio.</p>
+  <p>OBLIVION — an interactive fiction built with hand-written WebGL, CSS and vanilla JavaScript. No libraries, no network requests. Sound is generated in your browser and stays off unless you turn it on.</p>
   <p class="colophon__meta"><span data-meta-renderer>initialising</span> · <span data-meta-chapter>chapter 00</span> · <span data-meta-fps>—</span></p>
 </footer>
 
