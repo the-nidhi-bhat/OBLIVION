@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T19:39:05",
+  "generated": "2026-10-26T21:09:09",
   "base_url": "http://127.0.0.1:4190/",
   "browser": "Chromium (Playwright Python)",
   "checks": [
@@ -22,8 +22,8 @@
       "viewport": "delivery",
       "result": "PASS",
       "detail": {
-        "pct": 52,
-        "reason": "type resolved \u00b7 memory sectors mapped",
+        "pct": 25,
+        "reason": "signal acquired",
         "title": "OBLIVION The world that forgot you",
         "locked": true,
         "inert": true,
@@ -186,7 +186,20 @@
       "detail": {
         "doc": 0,
         "loose": [],
-        "reachable": []
+        "reachable": [
+          {
+            "tag": "button",
+            "cls": "chip chip--ghost chip--sound",
+            "left": 245,
+            "right": 329
+          },
+          {
+            "tag": "button",
+            "cls": "chip chip--ghost",
+            "left": 337,
+            "right": 400
+          }
+        ]
       }
     },
     {
@@ -194,7 +207,7 @@
       "viewport": "mobile-320",
       "result": "PASS",
       "detail": {
-        "total": 25,
+        "total": 26,
         "unnamed": []
       }
     },
@@ -214,8 +227,8 @@
           "visible": true
         },
         "rect": {
-          "top": 6,
-          "bottom": 54,
+          "top": 8,
+          "bottom": 56,
           "focused": true
         }
       }
@@ -318,7 +331,7 @@
       "result": "PASS",
       "detail": {
         "backend": "webgl",
-        "frames": 51,
+        "frames": 44,
         "err": null
       }
     },
@@ -329,7 +342,14 @@
       "detail": {
         "doc": 0,
         "loose": [],
-        "reachable": []
+        "reachable": [
+          {
+            "tag": "button",
+            "cls": "chip chip--ghost",
+            "left": 337,
+            "right": 400
+          }
+        ]
       }
     },
     {
@@ -337,7 +357,7 @@
       "viewport": "mobile-390",
       "result": "PASS",
       "detail": {
-        "total": 25,
+        "total": 26,
         "unnamed": []
       }
     },
@@ -358,7 +378,7 @@
         },
         "rect": {
           "top": 7,
-          "bottom": 42,
+          "bottom": 43,
           "focused": true
         }
       }
@@ -461,7 +481,7 @@
       "result": "PASS",
       "detail": {
         "backend": "webgl",
-        "frames": 65,
+        "frames": 49,
         "err": null
       }
     },
@@ -472,7 +492,14 @@
       "detail": {
         "doc": 0,
         "loose": [],
-        "reachable": []
+        "reachable": [
+          {
+            "tag": "button",
+            "cls": "chip chip--ghost",
+            "left": 733,
+            "right": 805
+          }
+        ]
       }
     },
     {
@@ -480,7 +507,7 @@
       "viewport": "tablet-768",
       "result": "PASS",
       "detail": {
-        "total": 25,
+        "total": 26,
         "unnamed": []
       }
     },
@@ -604,7 +631,7 @@
       "result": "PASS",
       "detail": {
         "backend": "webgl",
-        "frames": 63,
+        "frames": 56,
         "err": null
       }
     },
@@ -623,7 +650,7 @@
       "viewport": "laptop-1024",
       "result": "PASS",
       "detail": {
-        "total": 25,
+        "total": 26,
         "unnamed": []
       }
     },
@@ -643,7 +670,150 @@
           "visible": true
         },
         "rect": {
-          "top": 7,
+          "top": 3,
+          "bottom": 38,
+          "focused": true
+        }
+      }
+    },
+    {
+      "id": "every reached tab stop shows a focus ring and is visible",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "headings start at h1 and never skip a level downward",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": {
+        "levels": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "skips": []
+      }
+    },
+    {
+      "id": "no heading is clipped horizontally",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "chapter-01 and HUD text meet WCAG AA contrast",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "wide screens keep the pinned stages",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 2,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 3,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 4,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 5,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 6,
+          "pos": "relative",
+          "pin": 0,
+          "vh": 768
+        }
+      ]
+    },
+    {
+      "id": "no console errors, page errors, failed requests or 4xx/5xx",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "the WebGL world compiled and is drawing frames",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": {
+        "backend": "webgl",
+        "frames": 50,
+        "err": null
+      }
+    },
+    {
+      "id": "no horizontal overflow and no control stranded off-screen",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      }
+    },
+    {
+      "id": "every interactive control has an accessible name",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": {
+        "total": 26,
+        "unnamed": []
+      }
+    },
+    {
+      "id": "the skip link is the first focusable and slides into view when reached",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": {
+        "dom": {
+          "first": "skip|Skip to the story",
+          "isSkip": true
+        },
+        "focused": {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        },
+        "rect": {
+          "top": 8,
           "bottom": 43,
           "focused": true
         }
@@ -651,149 +821,6 @@
     },
     {
       "id": "every reached tab stop shows a focus ring and is visible",
-      "viewport": "laptop-1024",
-      "result": "PASS",
-      "detail": []
-    },
-    {
-      "id": "headings start at h1 and never skip a level downward",
-      "viewport": "laptop-1024",
-      "result": "PASS",
-      "detail": {
-        "levels": [
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2
-        ],
-        "skips": []
-      }
-    },
-    {
-      "id": "no heading is clipped horizontally",
-      "viewport": "laptop-1024",
-      "result": "PASS",
-      "detail": []
-    },
-    {
-      "id": "chapter-01 and HUD text meet WCAG AA contrast",
-      "viewport": "laptop-1024",
-      "result": "PASS",
-      "detail": []
-    },
-    {
-      "id": "wide screens keep the pinned stages",
-      "viewport": "laptop-1024",
-      "result": "PASS",
-      "detail": [
-        {
-          "i": 1,
-          "pos": "sticky",
-          "pin": 2304,
-          "vh": 768
-        },
-        {
-          "i": 2,
-          "pos": "sticky",
-          "pin": 2304,
-          "vh": 768
-        },
-        {
-          "i": 3,
-          "pos": "sticky",
-          "pin": 2304,
-          "vh": 768
-        },
-        {
-          "i": 4,
-          "pos": "sticky",
-          "pin": 2304,
-          "vh": 768
-        },
-        {
-          "i": 5,
-          "pos": "sticky",
-          "pin": 2304,
-          "vh": 768
-        },
-        {
-          "i": 6,
-          "pos": "relative",
-          "pin": 0,
-          "vh": 768
-        }
-      ]
-    },
-    {
-      "id": "no console errors, page errors, failed requests or 4xx/5xx",
-      "viewport": "laptop-1024",
-      "result": "PASS",
-      "detail": {
-        "console": [],
-        "errors": [],
-        "failed": [],
-        "bad": []
-      }
-    },
-    {
-      "id": "the WebGL world compiled and is drawing frames",
-      "viewport": "laptop-1024",
-      "result": "PASS",
-      "detail": {
-        "backend": "webgl",
-        "frames": 56,
-        "err": null
-      }
-    },
-    {
-      "id": "no horizontal overflow and no control stranded off-screen",
-      "viewport": "desktop-1440",
-      "result": "PASS",
-      "detail": {
-        "doc": 0,
-        "loose": [],
-        "reachable": []
-      }
-    },
-    {
-      "id": "every interactive control has an accessible name",
-      "viewport": "desktop-1440",
-      "result": "PASS",
-      "detail": {
-        "total": 25,
-        "unnamed": []
-      }
-    },
-    {
-      "id": "the skip link is the first focusable and slides into view when reached",
-      "viewport": "desktop-1440",
-      "result": "PASS",
-      "detail": {
-        "dom": {
-          "first": "skip|Skip to the story",
-          "isSkip": true
-        },
-        "focused": {
-          "tag": "a",
-          "name": "Skip to the story",
-          "ring": true,
-          "visible": true
-        },
-        "rect": {
-          "top": 5,
-          "bottom": 40,
-          "focused": true
-        }
-      }
-    },
-    {
-      "id": "every reached tab stop shows a focus ring and is visible",
       "viewport": "desktop-1440",
       "result": "PASS",
       "detail": []
@@ -890,7 +917,7 @@
       "result": "PASS",
       "detail": {
         "backend": "webgl",
-        "frames": 67,
+        "frames": 59,
         "err": null
       }
     },
@@ -1411,8 +1438,8 @@
       "result": "PASS",
       "detail": {
         "before": {
-          "session": "00:01",
-          "sessionText": "00:01",
+          "session": "00:00",
+          "sessionText": "00:00",
           "record": "09Y 000D",
           "recordText": "09Y 000D",
           "meta": "Signal\u00a0stable"
@@ -1694,8 +1721,8 @@
       "detail": {
         "mid": {
           "holding": "true",
-          "hold": 0.38,
-          "fill": "0.379"
+          "hold": 0.35,
+          "fill": "0.348"
         },
         "cancelled": {
           "shown": false,
@@ -2154,6 +2181,241 @@
       }
     },
     {
+      "id": "sound starts switched off and builds no audio context until asked",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "supported": true,
+        "constructed": false,
+        "enabled": false,
+        "state": "none",
+        "pressed": "false",
+        "label": "off"
+      }
+    },
+    {
+      "id": "the sound switch builds a generated room tone and switches it off again",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "on": {
+          "supported": true,
+          "constructed": true,
+          "enabled": true,
+          "state": "running",
+          "pressed": "true",
+          "label": "on"
+        },
+        "off": {
+          "supported": true,
+          "constructed": true,
+          "enabled": false,
+          "state": "running",
+          "pressed": "false",
+          "label": "off"
+        }
+      }
+    },
+    {
+      "id": "the sound layer adds no console or page errors",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "a first discovery fires exactly one cue and one haptic pulse",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "cues": 1,
+        "vibrations": [
+          12
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "re-opening a held record repeats neither the cue nor the pulse",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "cues": 1,
+        "vibrations": [
+          12
+        ],
+        "count": 1
+      }
+    },
+    {
+      "id": "a desktop pointer gets the archive reticle",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "visible": true,
+        "on": true
+      }
+    },
+    {
+      "id": "touch devices keep the native pointer",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "visible": false,
+        "on": false
+      }
+    },
+    {
+      "id": "reduced motion leaves the pointer alone",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "visible": false,
+        "on": false
+      }
+    },
+    {
+      "id": "clean ECHO lines resolve into focus and stay readable",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "in": {
+          "resolving": true,
+          "text": "ECHO: Every glass thing here is somebody's afternoon. Try not to break one."
+        },
+        "after": {
+          "resolving": false,
+          "text": "ECHO: Every glass thing here is somebody's afternoon. Try not to break one."
+        }
+      }
+    },
+    {
+      "id": "the resolve animation adds no errors",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "the fracture cut plays into the revelation and back out",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "forward": {
+          "dir": "forward",
+          "on": true,
+          "display": "block"
+        },
+        "back": {
+          "dir": "back",
+          "on": true,
+          "display": "block"
+        }
+      }
+    },
+    {
+      "id": "the fracture cut adds no errors",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "reduced motion skips the fracture cut",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "on": false,
+        "display": "none"
+      }
+    },
+    {
+      "id": "a return visit is acknowledged only after the archive has seen you",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "first": "ECHO: Welcome to Meridian. Population: nine million, four hundred thousand. Current residents: zero.",
+        "return": {
+          "text": "ECHO: You came back. The archive did not expect that.",
+          "count": 0
+        }
+      }
+    },
+    {
+      "id": "each ending keeps its own visual treatment",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "restore": {
+          "classes": [
+            "is-ending",
+            "is-restoring"
+          ],
+          "ending": "restore",
+          "title": "restoreSettle",
+          "inner": "none",
+          "row": "none",
+          "cues": 1,
+          "shown": true
+        },
+        "erase": {
+          "classes": [
+            "is-ending",
+            "is-erasing"
+          ],
+          "ending": "erase",
+          "title": "none",
+          "inner": "none",
+          "row": "eraseRow",
+          "cues": 2,
+          "shown": true
+        },
+        "rewrite": {
+          "classes": [
+            "is-ending",
+            "is-rewriting"
+          ],
+          "ending": "rewrite",
+          "title": "none",
+          "inner": "rewriteBuild",
+          "row": "none",
+          "cues": 3,
+          "shown": true
+        }
+      }
+    },
+    {
+      "id": "every ending queues its audio cue even with sound off",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "cues": 3
+      }
+    },
+    {
+      "id": "the ending treatments add no errors",
+      "viewport": "v4",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
       "id": "layout shift stays inside the 0.1 budget (probe proven by a control)",
       "viewport": "metrics",
       "result": "PASS",
@@ -2179,8 +2441,8 @@
       "viewport": "metrics",
       "result": "PASS",
       "detail": {
-        "frames": 36,
-        "text": "35 fps measured",
+        "frames": 44,
+        "text": "47 fps measured",
         "renderer": "WebGL \u00b7 19,200 pts"
       }
     }
@@ -2202,17 +2464,30 @@
         "isSkip": true
       },
       "skip_rect": {
-        "top": 6,
-        "bottom": 54,
+        "top": 8,
+        "bottom": 56,
         "focused": true
       },
       "overflow": {
         "doc": 0,
         "loose": [],
-        "reachable": []
+        "reachable": [
+          {
+            "tag": "button",
+            "cls": "chip chip--ghost chip--sound",
+            "left": 245,
+            "right": 329
+          },
+          {
+            "tag": "button",
+            "cls": "chip chip--ghost",
+            "left": 337,
+            "right": 400
+          }
+        ]
       },
       "names": {
-        "total": 25,
+        "total": 26,
         "unnamed": []
       },
       "tab_stops": [
@@ -2261,6 +2536,12 @@
         {
           "tag": "button",
           "name": "Evidence 0",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Sound off \u2014 generated in your browser",
           "ring": true,
           "visible": true
         },
@@ -2341,12 +2622,6 @@
           "name": "Review evidence",
           "ring": true,
           "visible": true
-        },
-        {
-          "tag": "body",
-          "name": null,
-          "ring": false,
-          "visible": false
         }
       ],
       "headings": [
@@ -2588,7 +2863,7 @@
       },
       "scene": {
         "backend": "webgl",
-        "frames": 51,
+        "frames": 44,
         "err": null
       }
     },
@@ -2609,16 +2884,23 @@
       },
       "skip_rect": {
         "top": 7,
-        "bottom": 42,
+        "bottom": 43,
         "focused": true
       },
       "overflow": {
         "doc": 0,
         "loose": [],
-        "reachable": []
+        "reachable": [
+          {
+            "tag": "button",
+            "cls": "chip chip--ghost",
+            "left": 337,
+            "right": 400
+          }
+        ]
       },
       "names": {
-        "total": 25,
+        "total": 26,
         "unnamed": []
       },
       "tab_stops": [
@@ -2672,7 +2954,19 @@
         },
         {
           "tag": "button",
+          "name": "Sound off \u2014 generated in your browser",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
           "name": "Replay",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Enter the unknown",
           "ring": true,
           "visible": true
         },
@@ -2739,18 +3033,6 @@
         {
           "tag": "button",
           "name": "Review evidence",
-          "ring": true,
-          "visible": true
-        },
-        {
-          "tag": "body",
-          "name": null,
-          "ring": false,
-          "visible": false
-        },
-        {
-          "tag": "a",
-          "name": "Skip to the story",
           "ring": true,
           "visible": true
         }
@@ -2994,7 +3276,7 @@
       },
       "scene": {
         "backend": "webgl",
-        "frames": 65,
+        "frames": 49,
         "err": null
       }
     },
@@ -3021,10 +3303,17 @@
       "overflow": {
         "doc": 0,
         "loose": [],
-        "reachable": []
+        "reachable": [
+          {
+            "tag": "button",
+            "cls": "chip chip--ghost",
+            "left": 733,
+            "right": 805
+          }
+        ]
       },
       "names": {
-        "total": 25,
+        "total": 26,
         "unnamed": []
       },
       "tab_stops": [
@@ -3073,6 +3362,12 @@
         {
           "tag": "button",
           "name": "Evidence 0",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Sound off \u2014 generated in your browser",
           "ring": true,
           "visible": true
         },
@@ -3153,12 +3448,6 @@
           "name": null,
           "ring": false,
           "visible": false
-        },
-        {
-          "tag": "a",
-          "name": "Skip to the story",
-          "ring": true,
-          "visible": true
         }
       ],
       "headings": [
@@ -3275,7 +3564,7 @@
         {
           "sel": ".rail a[aria-current='true']",
           "found": true,
-          "ratio": 16.95,
+          "ratio": 18.05,
           "size": 9.92,
           "large": false,
           "required": 4.5,
@@ -3400,7 +3689,7 @@
       },
       "scene": {
         "backend": "webgl",
-        "frames": 63,
+        "frames": 56,
         "err": null
       }
     },
@@ -3420,8 +3709,8 @@
         "isSkip": true
       },
       "skip_rect": {
-        "top": 7,
-        "bottom": 43,
+        "top": 3,
+        "bottom": 38,
         "focused": true
       },
       "overflow": {
@@ -3430,7 +3719,7 @@
         "reachable": []
       },
       "names": {
-        "total": 25,
+        "total": 26,
         "unnamed": []
       },
       "tab_stops": [
@@ -3484,7 +3773,19 @@
         },
         {
           "tag": "button",
+          "name": "Sound off \u2014 generated in your browser",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
           "name": "Replay",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Enter the unknown",
           "ring": true,
           "visible": true
         },
@@ -3551,18 +3852,6 @@
         {
           "tag": "button",
           "name": "Review evidence",
-          "ring": true,
-          "visible": true
-        },
-        {
-          "tag": "body",
-          "name": null,
-          "ring": false,
-          "visible": false
-        },
-        {
-          "tag": "a",
-          "name": "Skip to the story",
           "ring": true,
           "visible": true
         }
@@ -3806,7 +4095,7 @@
       },
       "scene": {
         "backend": "webgl",
-        "frames": 56,
+        "frames": 50,
         "err": null
       }
     },
@@ -3826,8 +4115,8 @@
         "isSkip": true
       },
       "skip_rect": {
-        "top": 5,
-        "bottom": 40,
+        "top": 8,
+        "bottom": 43,
         "focused": true
       },
       "overflow": {
@@ -3836,7 +4125,7 @@
         "reachable": []
       },
       "names": {
-        "total": 25,
+        "total": 26,
         "unnamed": []
       },
       "tab_stops": [
@@ -3885,6 +4174,12 @@
         {
           "tag": "button",
           "name": "Evidence 0",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Sound off \u2014 generated in your browser",
           "ring": true,
           "visible": true
         },
@@ -3965,12 +4260,6 @@
           "name": null,
           "ring": false,
           "visible": false
-        },
-        {
-          "tag": "a",
-          "name": "Skip to the story",
-          "ring": true,
-          "visible": true
         }
       ],
       "headings": [
@@ -4212,7 +4501,7 @@
       },
       "scene": {
         "backend": "webgl",
-        "frames": 67,
+        "frames": 59,
         "err": null
       }
     }
@@ -4589,315 +4878,327 @@
     "w": 780
   },
   "perf": {
-    "frames": 36,
-    "text": "35 fps measured",
+    "frames": 44,
+    "text": "47 fps measured",
     "renderer": "WebGL \u00b7 19,200 pts"
   },
   "screenshots": [
     {
       "file": "00-intro.png",
-      "bytes": 192000,
-      "sha256_16": "45c7eee02cfa1def",
+      "bytes": 198465,
+      "sha256_16": "659b93ebf2ac4ca2",
       "scrollY": 0
     },
     {
       "file": "mobile-320-ch1.png",
-      "bytes": 215394,
-      "sha256_16": "3c596f4c63d22e3c",
-      "scrollY": 4221
+      "bytes": 219974,
+      "sha256_16": "bfb99128201cba08",
+      "scrollY": 2920
     },
     {
       "file": "mobile-320-ch2.png",
-      "bytes": 159642,
-      "sha256_16": "9734df4acca201d0",
-      "scrollY": 2992
+      "bytes": 163574,
+      "sha256_16": "07b63be08c27efb7",
+      "scrollY": 2331
     },
     {
       "file": "mobile-320-ch3.png",
-      "bytes": 164875,
-      "sha256_16": "641797118a628a11",
+      "bytes": 164541,
+      "sha256_16": "284c326a56cdd425",
       "scrollY": 2337
     },
     {
       "file": "mobile-320-ch4.png",
-      "bytes": 171105,
-      "sha256_16": "4133ca77b51f5d2a",
+      "bytes": 178442,
+      "sha256_16": "99d82c5ee0d150b0",
       "scrollY": 3511
     },
     {
       "file": "mobile-320-ch5.png",
-      "bytes": 163315,
-      "sha256_16": "119ca37b1b3eeaf4",
+      "bytes": 163467,
+      "sha256_16": "24060f50f494b14e",
       "scrollY": 4635
     },
     {
       "file": "mobile-320-ch6.png",
-      "bytes": 139387,
-      "sha256_16": "0c604e28551f83c6",
+      "bytes": 139395,
+      "sha256_16": "9f55fb17e9477285",
       "scrollY": 5900
     },
     {
       "file": "mobile-390-ch1.png",
-      "bytes": 2741,
-      "sha256_16": "ef7c047b660f6458",
-      "scrollY": 5381
+      "bytes": 261956,
+      "sha256_16": "9cee75e7170207e7",
+      "scrollY": 1377
     },
     {
       "file": "mobile-390-ch2.png",
-      "bytes": 193784,
-      "sha256_16": "c757c0903b9dea36",
-      "scrollY": 1163
+      "bytes": 168880,
+      "sha256_16": "3dd3386c15917544",
+      "scrollY": 1392
     },
     {
       "file": "mobile-390-ch3.png",
-      "bytes": 204725,
-      "sha256_16": "d43804a5feeb772b",
+      "bytes": 207696,
+      "sha256_16": "1203c8a585d3b9b8",
       "scrollY": 2223
     },
     {
       "file": "mobile-390-ch4.png",
-      "bytes": 217287,
-      "sha256_16": "c47b0bf34749f819",
+      "bytes": 224953,
+      "sha256_16": "3293bc30d0932be0",
       "scrollY": 3330
     },
     {
       "file": "mobile-390-ch5.png",
-      "bytes": 212040,
-      "sha256_16": "b706f169e9a991b8",
+      "bytes": 214742,
+      "sha256_16": "ff9dc1a5c48ae19f",
       "scrollY": 4331
     },
     {
       "file": "mobile-390-ch6.png",
-      "bytes": 168712,
-      "sha256_16": "bd2b8981cf34c7f0",
+      "bytes": 171993,
+      "sha256_16": "d654cfda547685ad",
       "scrollY": 5507
     },
     {
       "file": "tablet-768-ch1.png",
-      "bytes": 433021,
-      "sha256_16": "a6cd4fb4f503cedf",
-      "scrollY": 4252
+      "bytes": 408089,
+      "sha256_16": "62455f89a8776834",
+      "scrollY": 3233
     },
     {
       "file": "tablet-768-ch2.png",
-      "bytes": 389376,
-      "sha256_16": "4f2468b040710ab0",
-      "scrollY": 794
+      "bytes": 356355,
+      "sha256_16": "eb7aebfd21f05b1c",
+      "scrollY": 1111
     },
     {
       "file": "tablet-768-ch3.png",
-      "bytes": 334211,
-      "sha256_16": "31a9b6c67a14b44e",
+      "bytes": 331107,
+      "sha256_16": "ee24f98693ee4519",
       "scrollY": 1717
     },
     {
       "file": "tablet-768-ch4.png",
-      "bytes": 357803,
-      "sha256_16": "787e38064d69a696",
+      "bytes": 365037,
+      "sha256_16": "bfb2fb2d800d2228",
       "scrollY": 2678
     },
     {
       "file": "tablet-768-ch5.png",
-      "bytes": 379321,
-      "sha256_16": "2f52f4a861973449",
+      "bytes": 378904,
+      "sha256_16": "c145b5339986b678",
       "scrollY": 3407
     },
     {
       "file": "tablet-768-ch6.png",
-      "bytes": 316083,
-      "sha256_16": "9a9834d1b1052cc6",
+      "bytes": 315936,
+      "sha256_16": "eba9be796ac54f96",
       "scrollY": 4133
     },
     {
       "file": "laptop-1024-ch1.png",
-      "bytes": 120756,
-      "sha256_16": "1161393fb4545890",
-      "scrollY": 11182
+      "bytes": 298836,
+      "sha256_16": "68604e499bf65ebc",
+      "scrollY": 4507
     },
     {
       "file": "laptop-1024-ch2.png",
-      "bytes": 374345,
-      "sha256_16": "15d1756b09aa46af",
-      "scrollY": 3346
+      "bytes": 375495,
+      "sha256_16": "38dcdd7752e5ccd2",
+      "scrollY": 3517
     },
     {
       "file": "laptop-1024-ch3.png",
-      "bytes": 300464,
-      "sha256_16": "6395e40bcc591015",
+      "bytes": 305610,
+      "sha256_16": "43e8f29e3c7e66a7",
       "scrollY": 5376
     },
     {
       "file": "laptop-1024-ch4.png",
-      "bytes": 235744,
-      "sha256_16": "ba0b979a96b380e8",
+      "bytes": 242054,
+      "sha256_16": "54f3032b543b7ad9",
       "scrollY": 7680
     },
     {
       "file": "laptop-1024-ch5.png",
-      "bytes": 417516,
-      "sha256_16": "edbec164aba8f93f",
+      "bytes": 416714,
+      "sha256_16": "eeb250b1c220cfc6",
       "scrollY": 9984
     },
     {
       "file": "laptop-1024-ch6.png",
-      "bytes": 365578,
-      "sha256_16": "9762db6a277d5861",
+      "bytes": 365874,
+      "sha256_16": "f9a5273930869bc7",
       "scrollY": 11559
     },
     {
       "file": "desktop-1440-ch1.png",
-      "bytes": 78763,
-      "sha256_16": "ddeb4826b9d825d6",
-      "scrollY": 12787
+      "bytes": 420222,
+      "sha256_16": "e50aadb2c09fb53f",
+      "scrollY": 10164
     },
     {
       "file": "desktop-1440-ch2.png",
-      "bytes": 449757,
-      "sha256_16": "bf47034378d5cba4",
-      "scrollY": 3770
+      "bytes": 447428,
+      "sha256_16": "952e5224df1a5026",
+      "scrollY": 4478
     },
     {
       "file": "desktop-1440-ch3.png",
-      "bytes": 460779,
-      "sha256_16": "067e7b99f268fb16",
+      "bytes": 423366,
+      "sha256_16": "b5a29ce623a1d043",
       "scrollY": 6300
     },
     {
       "file": "desktop-1440-ch4.png",
-      "bytes": 312994,
-      "sha256_16": "8eef236bd973134f",
+      "bytes": 314075,
+      "sha256_16": "3500ca134c82eab5",
       "scrollY": 9000
     },
     {
       "file": "desktop-1440-ch5.png",
-      "bytes": 565311,
-      "sha256_16": "9df85aa35af7501d",
+      "bytes": 501998,
+      "sha256_16": "faf86b7d4f21beb2",
       "scrollY": 11700
     },
     {
       "file": "desktop-1440-ch6.png",
-      "bytes": 469581,
-      "sha256_16": "77c2f549c262000b",
+      "bytes": 470588,
+      "sha256_16": "bb1e3b6d54c151af",
       "scrollY": 13506
     },
     {
       "file": "scroll-ch1-mid.png",
-      "bytes": 457883,
-      "sha256_16": "bb34a433add88111",
+      "bytes": 458716,
+      "sha256_16": "aa5c0b2fddd0f2e6",
       "scrollY": 900
     },
     {
       "file": "scroll-ch2-mid.png",
-      "bytes": 465309,
-      "sha256_16": "76ac8c9764ccebb0",
+      "bytes": 467676,
+      "sha256_16": "912c1fac32fb8495",
       "scrollY": 3600
     },
     {
       "file": "scroll-ch3-mid.png",
-      "bytes": 443930,
-      "sha256_16": "9dc55e40fd5b3df8",
+      "bytes": 445812,
+      "sha256_16": "30e167da32e7e52e",
       "scrollY": 6300
     },
     {
       "file": "scroll-ch4-mid.png",
-      "bytes": 297535,
-      "sha256_16": "8fe42b3089d675a1",
+      "bytes": 309455,
+      "sha256_16": "47a639ed10c0f105",
       "scrollY": 9000
     },
     {
       "file": "scroll-ch5-mid.png",
-      "bytes": 575881,
-      "sha256_16": "6ddf8d7a890363ed",
+      "bytes": 618318,
+      "sha256_16": "761854187fe97805",
       "scrollY": 11700
     },
     {
       "file": "nav-ch1.png",
-      "bytes": 451495,
-      "sha256_16": "76a0bd59afd28270",
+      "bytes": 461311,
+      "sha256_16": "fedfb3719e157d72",
       "scrollY": 0
     },
     {
       "file": "nav-ch3.png",
-      "bytes": 336206,
-      "sha256_16": "5b66d3d1ac591121",
+      "bytes": 338428,
+      "sha256_16": "dd9d30dd0f8c75e5",
       "scrollY": 5332
     },
     {
       "file": "nav-ch6.png",
-      "bytes": 450171,
-      "sha256_16": "88489c9c69889c6c",
+      "bytes": 451854,
+      "sha256_16": "1fd9cb8fa1a0ce2a",
       "scrollY": 13432
     },
     {
       "file": "evidence-f1.png",
-      "bytes": 226244,
-      "sha256_16": "f3879a55b2e41bff",
+      "bytes": 227089,
+      "sha256_16": "5c248ff8617a837d",
       "scrollY": 3600
     },
     {
       "file": "journal.png",
-      "bytes": 226555,
-      "sha256_16": "60364baec8986cf2",
+      "bytes": 205718,
+      "sha256_16": "577bf3f5f4199907",
       "scrollY": 3600
     },
     {
       "file": "v3-ghost.png",
-      "bytes": 445655,
-      "sha256_16": "9a7bbf79f005929d",
+      "bytes": 448009,
+      "sha256_16": "91da25f79e062767",
       "scrollY": 8032
     },
     {
       "file": "v3-journal.png",
-      "bytes": 248665,
-      "sha256_16": "d91b49f33428cf4c",
+      "bytes": 236790,
+      "sha256_16": "585e216d74764735",
       "scrollY": 0
     },
     {
       "file": "v3-seam.png",
-      "bytes": 348141,
-      "sha256_16": "5e136314e1edce65",
-      "scrollY": 5332
+      "bytes": 378663,
+      "sha256_16": "b160d02f7ed073ae",
+      "scrollY": 5236
     },
     {
       "file": "v3-hold-ending.png",
-      "bytes": 405531,
-      "sha256_16": "1afa2c8819f6ebbf",
+      "bytes": 406281,
+      "sha256_16": "21487f706711a0e0",
       "scrollY": 13432
     },
     {
       "file": "ending-restore.png",
-      "bytes": 412718,
-      "sha256_16": "8362852c65495a82",
-      "scrollY": 13584
+      "bytes": 432897,
+      "sha256_16": "7f2b3de92f8cf601",
+      "scrollY": 13432
     },
     {
       "file": "ending-erase.png",
-      "bytes": 309128,
-      "sha256_16": "9a9680461409f11e",
+      "bytes": 383245,
+      "sha256_16": "87216826b4cc138d",
       "scrollY": 13432
     },
     {
       "file": "ending-rewrite.png",
-      "bytes": 449415,
-      "sha256_16": "f6accdda58ec9efd",
+      "bytes": 444493,
+      "sha256_16": "4943f7acd63a3b54",
       "scrollY": 13432
     },
     {
       "file": "reduced-ending.png",
-      "bytes": 420817,
-      "sha256_16": "7385bd655dae7ae1",
+      "bytes": 419963,
+      "sha256_16": "849ce5cf45f0a561",
       "scrollY": 3161
     },
     {
       "file": "no-webgl.png",
-      "bytes": 533289,
-      "sha256_16": "d21954fed3b87a53",
+      "bytes": 535509,
+      "sha256_16": "27985d7a4491c666",
       "scrollY": 13432
     },
     {
+      "file": "v4-sound-on.png",
+      "bytes": 386868,
+      "sha256_16": "29fbd2c8f30e74d9",
+      "scrollY": 0
+    },
+    {
+      "file": "v4-ending-rewrite.png",
+      "bytes": 381062,
+      "sha256_16": "108b8fa03c63659c",
+      "scrollY": 0
+    },
+    {
       "file": "final-choice.png",
-      "bytes": 383753,
-      "sha256_16": "318eab9b2eb37e70",
+      "bytes": 385348,
+      "sha256_16": "4ead36beab7c772a",
       "scrollY": 0
     }
   ],
@@ -4950,9 +5251,118 @@
     "empty": true,
     "echo": "ECHO: \u201cYou are close to the part I would have deleted twice.\u201d"
   },
+  "v4_sound": {
+    "initial": {
+      "supported": true,
+      "constructed": false,
+      "enabled": false,
+      "state": "none",
+      "pressed": "false",
+      "label": "off"
+    },
+    "enabled": {
+      "supported": true,
+      "constructed": true,
+      "enabled": true,
+      "state": "running",
+      "pressed": "true",
+      "label": "on"
+    },
+    "disabled": {
+      "supported": true,
+      "constructed": true,
+      "enabled": false,
+      "state": "running",
+      "pressed": "false",
+      "label": "off"
+    }
+  },
+  "v4_discovery": {
+    "first": {
+      "cues": 1,
+      "vibrations": [
+        12
+      ],
+      "count": 1
+    },
+    "again": {
+      "cues": 1,
+      "vibrations": [
+        12
+      ],
+      "count": 1
+    }
+  },
+  "v4_resolve": {
+    "in": {
+      "resolving": true,
+      "text": "ECHO: Every glass thing here is somebody's afternoon. Try not to break one."
+    },
+    "after": {
+      "resolving": false,
+      "text": "ECHO: Every glass thing here is somebody's afternoon. Try not to break one."
+    }
+  },
+  "v4_cut": {
+    "forward": {
+      "dir": "forward",
+      "on": true,
+      "display": "block"
+    },
+    "back": {
+      "dir": "back",
+      "on": true,
+      "display": "block"
+    }
+  },
+  "v4_return": {
+    "first": "ECHO: Welcome to Meridian. Population: nine million, four hundred thousand. Current residents: zero.",
+    "return": {
+      "text": "ECHO: You came back. The archive did not expect that.",
+      "count": 0
+    }
+  },
+  "v4_endings": {
+    "restore": {
+      "classes": [
+        "is-ending",
+        "is-restoring"
+      ],
+      "ending": "restore",
+      "title": "restoreSettle",
+      "inner": "none",
+      "row": "none",
+      "cues": 1,
+      "shown": true
+    },
+    "erase": {
+      "classes": [
+        "is-ending",
+        "is-erasing"
+      ],
+      "ending": "erase",
+      "title": "none",
+      "inner": "none",
+      "row": "eraseRow",
+      "cues": 2,
+      "shown": true
+    },
+    "rewrite": {
+      "classes": [
+        "is-ending",
+        "is-rewriting"
+      ],
+      "ending": "rewrite",
+      "title": "none",
+      "inner": "rewriteBuild",
+      "row": "none",
+      "cues": 3,
+      "shown": true
+    }
+  },
   "summary": {
-    "checks": 139,
-    "pass": 139,
+    "checks": 156,
+    "pass": 156,
     "fail": 0,
     "not_tested": 0
   }

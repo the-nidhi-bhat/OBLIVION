@@ -1376,6 +1376,262 @@ def main() -> None:
             results["keyboard"] = {"skip": skip_result, "journal": j_closed}
             kctx.close()
 
+            # ──────────────── v4: sound, discovery, reticle, resolve, cut, return ────────────────
+            print("\n── v4 interface")
+
+            sctx = browser.new_context(viewport={"width": 1440, "height": 900})
+            page_s = sctx.new_page()
+            sb = bucket()
+            wire(page_s, sb)
+            page_s.goto(BASE, wait_until="load")
+            skip_intro(page_s)
+            page_s.wait_for_timeout(400)
+            sound_read = """() => ({
+                supported: window.__audio.supported, constructed: window.__audio.constructed,
+                enabled: window.__audio.enabled, state: window.__audio.state,
+                pressed: document.querySelector('[data-sound-toggle]').getAttribute('aria-pressed'),
+                label: document.querySelector('[data-sound-label]').textContent.trim()
+            })"""
+            audio0 = page_s.evaluate(sound_read)
+            page_s.click("[data-sound-toggle]")
+            page_s.wait_for_timeout(450)
+            audio1 = page_s.evaluate(sound_read)
+            shot(page_s, "v4-sound-on")
+            page_s.click("[data-sound-toggle]")
+            page_s.wait_for_timeout(300)
+            audio2 = page_s.evaluate(sound_read)
+            record("sound starts switched off and builds no audio context until asked",
+                   audio0["supported"] and not audio0["constructed"] and not audio0["enabled"]
+                   and audio0["pressed"] == "false" and audio0["label"] == "off", audio0, "v4")
+            record("the sound switch builds a generated room tone and switches it off again",
+                   audio1["constructed"] and audio1["enabled"] and audio1["pressed"] == "true"
+                   and audio1["label"] == "on" and audio1["state"] in ("running", "suspended")
+                   and not audio2["enabled"] and audio2["pressed"] == "false" and audio2["label"] == "off",
+                   {"on": audio1, "off": audio2}, "v4")
+            record("the sound layer adds no console or page errors", not sb["console"] and not sb["errors"], sb, "v4")
+            results["v4_sound"] = {"initial": audio0, "enabled": audio1, "disabled": audio2}
+            sctx.close()
+
+            dctx = browser.new_context(viewport={"width": 1440, "height": 900})
+            dctx.add_init_script("""(() => {
+                window.__vibrations = [];
+                try {
+                    Object.defineProperty(navigator, 'vibrate', {
+                        configurable: true,
+                        value: (pattern) => { window.__vibrations.push(pattern); return true; }
+                    });
+                } catch (error) {}
+            })()""")
+            page_d = dctx.new_page()
+            db = bucket()
+            wire(page_d, db)
+            page_d.goto(BASE, wait_until="load")
+            skip_intro(page_d)
+            page_d.evaluate("() => window.__oblivion.goToScene(2, false)")
+            await_chapter(page_d, 2)
+            page_d.locator("[data-fragment='f1']").first.click()
+            page_d.wait_for_timeout(350)
+            disc1 = page_d.evaluate("""() => ({
+                cues: window.__audio.cues.discovery, vibrations: window.__vibrations.slice(),
+                count: window.__oblivion.state().count
+            })""")
+            page_d.keyboard.press("Escape")
+            page_d.wait_for_timeout(250)
+            page_d.locator("[data-fragment='f1']").first.click()
+            page_d.wait_for_timeout(300)
+            disc2 = page_d.evaluate("""() => ({
+                cues: window.__audio.cues.discovery, vibrations: window.__vibrations.slice(),
+                count: window.__oblivion.state().count
+            })""")
+            record("a first discovery fires exactly one cue and one haptic pulse",
+                   disc1["cues"] == 1 and disc1["vibrations"] == [12] and disc1["count"] == 1, disc1, "v4")
+            record("re-opening a held record repeats neither the cue nor the pulse",
+                   disc2["cues"] == 1 and disc2["vibrations"] == [12] and disc2["count"] == 1, disc2, "v4")
+            results["v4_discovery"] = {"first": disc1, "again": disc2}
+            dctx.close()
+
+            rctx4 = browser.new_context(viewport={"width": 1440, "height": 900})
+            page_ret = rctx4.new_page()
+            retb = bucket()
+            wire(page_ret, retb)
+            page_ret.goto(BASE, wait_until="load")
+            skip_intro(page_ret)
+            page_ret.mouse.move(720, 420)
+            page_ret.wait_for_timeout(400)
+            ring = page_ret.evaluate("""() => {
+                const el = document.querySelector('.cursor-ring');
+                if (!el) return {visible: false, on: false};
+                const style = getComputedStyle(el);
+                return {visible: style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0',
+                        on: el.classList.contains('is-on')};
+            }""")
+            record("a desktop pointer gets the archive reticle", ring["visible"] and ring["on"], ring, "v4")
+            rctx4.close()
+
+            tctx2 = browser.new_context(viewport={"width": 390, "height": 844}, has_touch=True, is_mobile=True)
+            page_touch = tctx2.new_page()
+            page_touch.goto(BASE, wait_until="load")
+            skip_intro(page_touch)
+            page_touch.wait_for_timeout(400)
+            ring_touch = page_touch.evaluate("""() => {
+                const el = document.querySelector('.cursor-ring');
+                if (!el) return {visible: false, on: false};
+                const style = getComputedStyle(el);
+                return {visible: style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0',
+                        on: el.classList.contains('is-on')};
+            }""")
+            record("touch devices keep the native pointer", not ring_touch["visible"] and not ring_touch["on"], ring_touch, "v4")
+            tctx2.close()
+
+            mctx2 = browser.new_context(viewport={"width": 1440, "height": 900}, reduced_motion="reduce")
+            page_rm = mctx2.new_page()
+            page_rm.goto(BASE, wait_until="load")
+            skip_intro(page_rm)
+            page_rm.mouse.move(720, 420)
+            page_rm.wait_for_timeout(300)
+            ring_rm = page_rm.evaluate("""() => {
+                const el = document.querySelector('.cursor-ring');
+                if (!el) return {visible: false, on: false};
+                const style = getComputedStyle(el);
+                return {visible: style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0',
+                        on: el.classList.contains('is-on')};
+            }""")
+            record("reduced motion leaves the pointer alone", not ring_rm["visible"] and not ring_rm["on"], ring_rm, "v4")
+            mctx2.close()
+
+            xctx = browser.new_context(viewport={"width": 1440, "height": 900})
+            page_x = xctx.new_page()
+            xb = bucket()
+            wire(page_x, xb)
+            page_x.goto(BASE, wait_until="load")
+            skip_intro(page_x)
+            page_x.wait_for_timeout(300)
+            imm = page_x.evaluate("""() => {
+                window.dispatchEvent(new CustomEvent('scroll:chapter', {detail: {chapter: 2}}));
+                const line = document.querySelector('.echo__line');
+                return {resolving: line.classList.contains('is-resolving'), text: line.textContent.trim()};
+            }""")
+            page_x.wait_for_timeout(760)
+            late = page_x.evaluate("""() => {
+                const line = document.querySelector('.echo__line');
+                return {resolving: line.classList.contains('is-resolving'), text: line.textContent.trim()};
+            }""")
+            record("clean ECHO lines resolve into focus and stay readable",
+                   imm["resolving"] and imm["text"].startswith("ECHO:") and len(imm["text"]) > 8
+                   and not late["resolving"] and late["text"] == imm["text"], {"in": imm, "after": late}, "v4")
+            record("the resolve animation adds no errors", not xb["console"] and not xb["errors"], xb, "v4")
+            results["v4_resolve"] = {"in": imm, "after": late}
+            xctx.close()
+
+            cctx2 = browser.new_context(viewport={"width": 1440, "height": 900})
+            page_cut = cctx2.new_page()
+            cutb = bucket()
+            wire(page_cut, cutb)
+            page_cut.goto(BASE, wait_until="load")
+            skip_intro(page_cut)
+            page_cut.evaluate("() => window.__oblivion.goToScene(3, false)")
+            await_chapter(page_cut, 3)
+            page_cut.evaluate("() => window.__oblivion.goToScene(4, false)")
+            await_chapter(page_cut, 4)
+            cut_fwd = page_cut.evaluate("""() => {
+                const el = document.querySelector('[data-seam-cut]');
+                return {dir: el.dataset.dir, on: el.classList.contains('is-on'), display: getComputedStyle(el).display};
+            }""")
+            page_cut.evaluate("() => window.__oblivion.goToScene(3, false)")
+            await_chapter(page_cut, 3)
+            cut_back = page_cut.evaluate("""() => {
+                const el = document.querySelector('[data-seam-cut]');
+                return {dir: el.dataset.dir, on: el.classList.contains('is-on'), display: getComputedStyle(el).display};
+            }""")
+            record("the fracture cut plays into the revelation and back out",
+                   cut_fwd["dir"] == "forward" and cut_fwd["on"] and cut_back["dir"] == "back" and cut_back["on"],
+                   {"forward": cut_fwd, "back": cut_back}, "v4")
+            record("the fracture cut adds no errors", not cutb["console"] and not cutb["errors"], cutb, "v4")
+            results["v4_cut"] = {"forward": cut_fwd, "back": cut_back}
+            cctx2.close()
+
+            rctx5 = browser.new_context(viewport={"width": 1440, "height": 900}, reduced_motion="reduce")
+            page_rcut = rctx5.new_page()
+            page_rcut.goto(BASE, wait_until="load")
+            skip_intro(page_rcut)
+            page_rcut.evaluate("() => window.__oblivion.goToScene(3, false)")
+            await_chapter(page_rcut, 3)
+            page_rcut.evaluate("() => window.__oblivion.goToScene(4, false)")
+            await_chapter(page_rcut, 4)
+            cut_reduced = page_rcut.evaluate("""() => {
+                const el = document.querySelector('[data-seam-cut]');
+                return {on: el.classList.contains('is-on'), display: getComputedStyle(el).display};
+            }""")
+            record("reduced motion skips the fracture cut", not cut_reduced["on"] and cut_reduced["display"] == "none", cut_reduced, "v4")
+            rctx5.close()
+
+            vctx = browser.new_context(viewport={"width": 1440, "height": 900})
+            page_v = vctx.new_page()
+            page_v.goto(BASE, wait_until="load")
+            skip_intro(page_v)
+            page_v.wait_for_timeout(700)
+            visit_first = page_v.evaluate("() => document.querySelector('.echo__line').textContent.trim()")
+            page_v.reload(wait_until="load")
+            skip_intro(page_v)
+            try:
+                page_v.wait_for_function("() => document.querySelector('.echo__line').textContent.toLowerCase().includes('came back')", timeout=5000)
+            except Exception:
+                pass
+            page_v.wait_for_timeout(200)
+            visit_second = page_v.evaluate("""() => ({
+                text: document.querySelector('.echo__line').textContent.trim(),
+                count: window.__oblivion.state().count
+            })""")
+            record("a return visit is acknowledged only after the archive has seen you",
+                   "came back" not in visit_first.lower()
+                   and "came back" in visit_second["text"].lower() and visit_second["count"] == 0,
+                   {"first": visit_first, "return": visit_second}, "v4")
+            results["v4_return"] = {"first": visit_first, "return": visit_second}
+            vctx.close()
+
+            ectx2 = browser.new_context(viewport={"width": 1440, "height": 900})
+            page_e2 = ectx2.new_page()
+            eb = bucket()
+            wire(page_e2, eb)
+            page_e2.goto(BASE, wait_until="load")
+            skip_intro(page_e2)
+            treatments = {}
+            for ending_key in ("restore", "erase", "rewrite"):
+                page_e2.evaluate("(key) => window.__oblivion.showEnding(key)", ending_key)
+                page_e2.wait_for_timeout(400)
+                treatments[ending_key] = page_e2.evaluate("""() => {
+                    const body = document.body;
+                    const title = document.querySelector('.ending__title');
+                    const inner = document.querySelector('.ending__inner');
+                    const row = document.querySelector('.ending__ledger li');
+                    return {
+                        classes: [...body.classList].filter((name) => name.startsWith('is-')),
+                        ending: body.dataset.ending,
+                        title: getComputedStyle(title).animationName,
+                        inner: inner ? getComputedStyle(inner).animationName : '',
+                        row: row ? getComputedStyle(row).animationName : '',
+                        cues: window.__audio.cues.ending,
+                        shown: !document.querySelector('[data-ending-screen]').hidden
+                    };
+                }""")
+            record("each ending keeps its own visual treatment",
+                   "is-restoring" in treatments["restore"]["classes"]
+                   and "restoreSettle" in treatments["restore"]["title"]
+                   and treatments["restore"]["shown"]
+                   and "is-erasing" in treatments["erase"]["classes"]
+                   and treatments["erase"]["ending"] == "erase"
+                   and "eraseRow" in treatments["erase"]["row"]
+                   and "is-rewriting" in treatments["rewrite"]["classes"]
+                   and "rewriteBuild" in treatments["rewrite"]["inner"],
+                   treatments, "v4")
+            record("every ending queues its audio cue even with sound off",
+                   treatments["rewrite"]["cues"] == 3, {"cues": treatments["rewrite"]["cues"]}, "v4")
+            record("the ending treatments add no errors", not eb["console"] and not eb["errors"], eb, "v4")
+            shot(page_e2, "v4-ending-rewrite")
+            results["v4_endings"] = treatments
+            ectx2.close()
+
+
             # â•â•â•â•â•â•â•â•â•â•â•â•â•â• 10. CLS, DPR, measured fps â•â•â•â•â•â•â•â•â•â•â•â•â•â•
             print("\nâ”€â”€ metrics")
             mctx = browser.new_context(viewport={"width": 1440, "height": 900})
