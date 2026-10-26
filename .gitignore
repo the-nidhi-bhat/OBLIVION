@@ -1,0 +1,21 @@
+# Local server and test artefacts
+reports/server.pid
+reports/screens/
+reports/smoke-*.png
+reports/v1-evidence/
+
+# Python tooling
+__pycache__/
+*.py[cod]
+
+# OS / editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Never commit local secrets
+.env
+.env.*
+!.env.example
