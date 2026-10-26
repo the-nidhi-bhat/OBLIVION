@@ -1,0 +1,4959 @@
+{
+  "generated": "2026-10-26T19:39:05",
+  "base_url": "http://127.0.0.1:4190/",
+  "browser": "Chromium (Playwright Python)",
+  "checks": [
+    {
+      "id": "server responds and the document loads",
+      "viewport": "delivery",
+      "result": "PASS",
+      "detail": "OBLIVION \u2014 The World That Forgot You"
+    },
+    {
+      "id": "opening sequence announces itself and can be skipped",
+      "viewport": "delivery",
+      "result": "PASS",
+      "detail": {
+        "skip": true
+      }
+    },
+    {
+      "id": "the boot sequence holds the page and shows the title",
+      "viewport": "delivery",
+      "result": "PASS",
+      "detail": {
+        "pct": 52,
+        "reason": "type resolved \u00b7 memory sectors mapped",
+        "title": "OBLIVION The world that forgot you",
+        "locked": true,
+        "inert": true,
+        "focus": "boot-title"
+      }
+    },
+    {
+      "id": "boot sequence completes on its own and releases the story",
+      "viewport": "delivery",
+      "result": "PASS",
+      "detail": {
+        "pct": 100,
+        "reason": "visitor admitted",
+        "source": "auto",
+        "locked": false,
+        "hidden": false,
+        "inert": false,
+        "focus": "ch1-title"
+      }
+    },
+    {
+      "id": "all six chapters exist in order",
+      "viewport": "story",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "name": "The City With No People",
+          "title": "Meridian MERIDIAN",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 2,
+          "name": "The Ocean of Lost Memories",
+          "title": "Nothing here was destroyed at random.",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 3,
+          "name": "The Room That Should Not Exist",
+          "title": "Someone lived here before the world did.",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 4,
+          "name": "ECHO Is Lying",
+          "title": "I never told you I NEVER TOLD YOU",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 5,
+          "name": "The Last Memory",
+          "title": "It was never trying to save the world.",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 6,
+          "name": "The Choice",
+          "title": "Whatever you choose, someone pays for it.",
+          "height": 912,
+          "stagePosition": "relative"
+        }
+      ]
+    },
+    {
+      "id": "every chapter has its own heading and name",
+      "viewport": "story",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "name": "The City With No People",
+          "title": "Meridian MERIDIAN",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 2,
+          "name": "The Ocean of Lost Memories",
+          "title": "Nothing here was destroyed at random.",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 3,
+          "name": "The Room That Should Not Exist",
+          "title": "Someone lived here before the world did.",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 4,
+          "name": "ECHO Is Lying",
+          "title": "I never told you I NEVER TOLD YOU",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 5,
+          "name": "The Last Memory",
+          "title": "It was never trying to save the world.",
+          "height": 2700,
+          "stagePosition": "sticky"
+        },
+        {
+          "i": 6,
+          "name": "The Choice",
+          "title": "Whatever you choose, someone pays for it.",
+          "height": 912,
+          "stagePosition": "relative"
+        }
+      ]
+    },
+    {
+      "id": "desktop chapters are pinned and taller than the viewport",
+      "viewport": "story",
+      "result": "PASS",
+      "detail": [
+        [
+          1,
+          "sticky",
+          2700
+        ],
+        [
+          2,
+          "sticky",
+          2700
+        ],
+        [
+          3,
+          "sticky",
+          2700
+        ],
+        [
+          4,
+          "sticky",
+          2700
+        ],
+        [
+          5,
+          "sticky",
+          2700
+        ],
+        [
+          6,
+          "relative",
+          912
+        ]
+      ]
+    },
+    {
+      "id": "no horizontal overflow and no control stranded off-screen",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      }
+    },
+    {
+      "id": "every interactive control has an accessible name",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": {
+        "total": 25,
+        "unnamed": []
+      }
+    },
+    {
+      "id": "the skip link is the first focusable and slides into view when reached",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": {
+        "dom": {
+          "first": "skip|Skip to the story",
+          "isSkip": true
+        },
+        "focused": {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        },
+        "rect": {
+          "top": 6,
+          "bottom": 54,
+          "focused": true
+        }
+      }
+    },
+    {
+      "id": "every reached tab stop shows a focus ring and is visible",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "headings start at h1 and never skip a level downward",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": {
+        "levels": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "skips": []
+      }
+    },
+    {
+      "id": "no heading is clipped horizontally",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "chapter-01 and HUD text meet WCAG AA contrast",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "small screens drop the pinning instead of shrinking it",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "pos": "static",
+          "pin": 1051,
+          "vh": 780
+        },
+        {
+          "i": 2,
+          "pos": "static",
+          "pin": 1056,
+          "vh": 780
+        },
+        {
+          "i": 3,
+          "pos": "static",
+          "pin": 1237,
+          "vh": 780
+        },
+        {
+          "i": 4,
+          "pos": "static",
+          "pin": 1112,
+          "vh": 780
+        },
+        {
+          "i": 5,
+          "pos": "static",
+          "pin": 1137,
+          "vh": 780
+        },
+        {
+          "i": 6,
+          "pos": "static",
+          "pin": 0,
+          "vh": 780
+        }
+      ]
+    },
+    {
+      "id": "no console errors, page errors, failed requests or 4xx/5xx",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "the WebGL world compiled and is drawing frames",
+      "viewport": "mobile-320",
+      "result": "PASS",
+      "detail": {
+        "backend": "webgl",
+        "frames": 51,
+        "err": null
+      }
+    },
+    {
+      "id": "no horizontal overflow and no control stranded off-screen",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      }
+    },
+    {
+      "id": "every interactive control has an accessible name",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": {
+        "total": 25,
+        "unnamed": []
+      }
+    },
+    {
+      "id": "the skip link is the first focusable and slides into view when reached",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": {
+        "dom": {
+          "first": "skip|Skip to the story",
+          "isSkip": true
+        },
+        "focused": {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        },
+        "rect": {
+          "top": 7,
+          "bottom": 42,
+          "focused": true
+        }
+      }
+    },
+    {
+      "id": "every reached tab stop shows a focus ring and is visible",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "headings start at h1 and never skip a level downward",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": {
+        "levels": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "skips": []
+      }
+    },
+    {
+      "id": "no heading is clipped horizontally",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "chapter-01 and HUD text meet WCAG AA contrast",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "small screens drop the pinning instead of shrinking it",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "pos": "static",
+          "pin": 986,
+          "vh": 844
+        },
+        {
+          "i": 2,
+          "pos": "static",
+          "pin": 1043,
+          "vh": 844
+        },
+        {
+          "i": 3,
+          "pos": "static",
+          "pin": 1232,
+          "vh": 844
+        },
+        {
+          "i": 4,
+          "pos": "static",
+          "pin": 982,
+          "vh": 844
+        },
+        {
+          "i": 5,
+          "pos": "static",
+          "pin": 1020,
+          "vh": 844
+        },
+        {
+          "i": 6,
+          "pos": "static",
+          "pin": 0,
+          "vh": 844
+        }
+      ]
+    },
+    {
+      "id": "no console errors, page errors, failed requests or 4xx/5xx",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "the WebGL world compiled and is drawing frames",
+      "viewport": "mobile-390",
+      "result": "PASS",
+      "detail": {
+        "backend": "webgl",
+        "frames": 65,
+        "err": null
+      }
+    },
+    {
+      "id": "no horizontal overflow and no control stranded off-screen",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      }
+    },
+    {
+      "id": "every interactive control has an accessible name",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": {
+        "total": 25,
+        "unnamed": []
+      }
+    },
+    {
+      "id": "the skip link is the first focusable and slides into view when reached",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": {
+        "dom": {
+          "first": "skip|Skip to the story",
+          "isSkip": true
+        },
+        "focused": {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        },
+        "rect": {
+          "top": 8,
+          "bottom": 43,
+          "focused": true
+        }
+      }
+    },
+    {
+      "id": "every reached tab stop shows a focus ring and is visible",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "headings start at h1 and never skip a level downward",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": {
+        "levels": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "skips": []
+      }
+    },
+    {
+      "id": "no heading is clipped horizontally",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "chapter-01 and HUD text meet WCAG AA contrast",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "small screens drop the pinning instead of shrinking it",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "pos": "static",
+          "pin": 789,
+          "vh": 1024
+        },
+        {
+          "i": 2,
+          "pos": "static",
+          "pin": 927,
+          "vh": 1024
+        },
+        {
+          "i": 3,
+          "pos": "static",
+          "pin": 962,
+          "vh": 1024
+        },
+        {
+          "i": 4,
+          "pos": "static",
+          "pin": 729,
+          "vh": 1024
+        },
+        {
+          "i": 5,
+          "pos": "static",
+          "pin": 726,
+          "vh": 1024
+        },
+        {
+          "i": 6,
+          "pos": "static",
+          "pin": 0,
+          "vh": 1024
+        }
+      ]
+    },
+    {
+      "id": "no console errors, page errors, failed requests or 4xx/5xx",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "the WebGL world compiled and is drawing frames",
+      "viewport": "tablet-768",
+      "result": "PASS",
+      "detail": {
+        "backend": "webgl",
+        "frames": 63,
+        "err": null
+      }
+    },
+    {
+      "id": "no horizontal overflow and no control stranded off-screen",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      }
+    },
+    {
+      "id": "every interactive control has an accessible name",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": {
+        "total": 25,
+        "unnamed": []
+      }
+    },
+    {
+      "id": "the skip link is the first focusable and slides into view when reached",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": {
+        "dom": {
+          "first": "skip|Skip to the story",
+          "isSkip": true
+        },
+        "focused": {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        },
+        "rect": {
+          "top": 7,
+          "bottom": 43,
+          "focused": true
+        }
+      }
+    },
+    {
+      "id": "every reached tab stop shows a focus ring and is visible",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "headings start at h1 and never skip a level downward",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": {
+        "levels": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "skips": []
+      }
+    },
+    {
+      "id": "no heading is clipped horizontally",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "chapter-01 and HUD text meet WCAG AA contrast",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "wide screens keep the pinned stages",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 2,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 3,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 4,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 5,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 6,
+          "pos": "relative",
+          "pin": 0,
+          "vh": 768
+        }
+      ]
+    },
+    {
+      "id": "no console errors, page errors, failed requests or 4xx/5xx",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "the WebGL world compiled and is drawing frames",
+      "viewport": "laptop-1024",
+      "result": "PASS",
+      "detail": {
+        "backend": "webgl",
+        "frames": 56,
+        "err": null
+      }
+    },
+    {
+      "id": "no horizontal overflow and no control stranded off-screen",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      }
+    },
+    {
+      "id": "every interactive control has an accessible name",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": {
+        "total": 25,
+        "unnamed": []
+      }
+    },
+    {
+      "id": "the skip link is the first focusable and slides into view when reached",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": {
+        "dom": {
+          "first": "skip|Skip to the story",
+          "isSkip": true
+        },
+        "focused": {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        },
+        "rect": {
+          "top": 5,
+          "bottom": 40,
+          "focused": true
+        }
+      }
+    },
+    {
+      "id": "every reached tab stop shows a focus ring and is visible",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "headings start at h1 and never skip a level downward",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": {
+        "levels": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "skips": []
+      }
+    },
+    {
+      "id": "no heading is clipped horizontally",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "chapter-01 and HUD text meet WCAG AA contrast",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "wide screens keep the pinned stages",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 2,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 3,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 4,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 5,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 6,
+          "pos": "relative",
+          "pin": 0,
+          "vh": 900
+        }
+      ]
+    },
+    {
+      "id": "no console errors, page errors, failed requests or 4xx/5xx",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "the WebGL world compiled and is drawing frames",
+      "viewport": "desktop-1440",
+      "result": "PASS",
+      "detail": {
+        "backend": "webgl",
+        "frames": 67,
+        "err": null
+      }
+    },
+    {
+      "id": "chapter 01 progress tracks the scroll position",
+      "viewport": "ch1",
+      "result": "PASS",
+      "detail": [
+        {
+          "frac": 0.15,
+          "p": 0.15,
+          "scrollY": 270
+        },
+        {
+          "frac": 0.5,
+          "p": 0.5,
+          "scrollY": 900
+        },
+        {
+          "frac": 0.85,
+          "p": 0.85,
+          "scrollY": 1530
+        }
+      ]
+    },
+    {
+      "id": "ch1 \u00e2\u20ac\u201d headline splits, depth and portal eye react to progress",
+      "viewport": "ch1",
+      "result": "PASS",
+      "detail": {
+        "letter": [
+          "matrix(0.966917, -0.0126576, 0.0126576, 0.966917, 0, -18.9)",
+          "matrix(0.889153, -0.0388213, 0.0388213, 0.889153, 0, -63)",
+          "matrix(0.810764, -0.0602502, 0.0602502, 0.810764, 0, -107.1)"
+        ],
+        "eye": [
+          0,
+          0,
+          0.736
+        ],
+        "sign": [
+          0.66,
+          1,
+          1
+        ],
+        "window": [
+          0,
+          0.6,
+          1
+        ]
+      }
+    },
+    {
+      "id": "chapter 02 progress tracks the scroll position",
+      "viewport": "ch2",
+      "result": "PASS",
+      "detail": [
+        {
+          "frac": 0.15,
+          "p": 0.15,
+          "scrollY": 2970
+        },
+        {
+          "frac": 0.5,
+          "p": 0.5,
+          "scrollY": 3600
+        },
+        {
+          "frac": 0.85,
+          "p": 0.85,
+          "scrollY": 4230
+        }
+      ]
+    },
+    {
+      "id": "ch2 \u00e2\u20ac\u201d memory objects drift at different depths as you descend",
+      "viewport": "ch2",
+      "result": "PASS",
+      "detail": {
+        "frag": [
+          "matrix(0.949, 0, 0, 0.949, 0, -21.6)",
+          "matrix(0.97, 0, 0, 0.97, 0, -72)",
+          "matrix(0.991, 0, 0, 0.991, 0, -122.4)"
+        ],
+        "glow": [
+          "matrix(1, 0, 0, 1, 0, -8.1)",
+          "matrix(1, 0, 0, 1, 0, -27)",
+          "matrix(1, 0, 0, 1, 0, -45.9)"
+        ]
+      }
+    },
+    {
+      "id": "chapter 03 progress tracks the scroll position",
+      "viewport": "ch3",
+      "result": "PASS",
+      "detail": [
+        {
+          "frac": 0.15,
+          "p": 0.15,
+          "scrollY": 5670
+        },
+        {
+          "frac": 0.5,
+          "p": 0.5,
+          "scrollY": 6300
+        },
+        {
+          "frac": 0.85,
+          "p": 0.85,
+          "scrollY": 6930
+        }
+      ]
+    },
+    {
+      "id": "ch3 \u00e2\u20ac\u201d the transcript is revealed by progress",
+      "viewport": "ch3",
+      "result": "PASS",
+      "detail": [
+        0,
+        4,
+        6
+      ]
+    },
+    {
+      "id": "ch3 \u00e2\u20ac\u201d the photograph turns over at its story beat",
+      "viewport": "ch3",
+      "result": "PASS",
+      "detail": [
+        {
+          "p": 0.15,
+          "photo": false,
+          "flip": ""
+        },
+        {
+          "p": 0.5,
+          "photo": false,
+          "flip": ""
+        },
+        {
+          "p": 0.85,
+          "photo": true,
+          "flip": "1"
+        }
+      ]
+    },
+    {
+      "id": "chapter 04 progress tracks the scroll position",
+      "viewport": "ch4",
+      "result": "PASS",
+      "detail": [
+        {
+          "frac": 0.15,
+          "p": 0.15,
+          "scrollY": 8370
+        },
+        {
+          "frac": 0.5,
+          "p": 0.5,
+          "scrollY": 9000
+        },
+        {
+          "frac": 0.85,
+          "p": 0.85,
+          "scrollY": 9630
+        }
+      ]
+    },
+    {
+      "id": "ch4 \u00e2\u20ac\u201d the environment folds and the reconstruction fills in",
+      "viewport": "ch4",
+      "result": "PASS",
+      "detail": {
+        "panel": [
+          "matrix(0.999995, -0.00314159, 0.00314159, 0.999995, -7.25756, -8.1)",
+          "matrix(0.999945, -0.0104718, 0.0104718, 0.999945, -24.1919, -27)",
+          "matrix(0.999842, -0.0178014, 0.0178014, 0.999842, -41.1262, -45.9)"
+        ],
+        "timeline": [
+          0,
+          4,
+          5
+        ],
+        "dialogue": [
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "chapter 05 progress tracks the scroll position",
+      "viewport": "ch5",
+      "result": "PASS",
+      "detail": [
+        {
+          "frac": 0.15,
+          "p": 0.15,
+          "scrollY": 11070
+        },
+        {
+          "frac": 0.5,
+          "p": 0.5,
+          "scrollY": 11700
+        },
+        {
+          "frac": 0.85,
+          "p": 0.85,
+          "scrollY": 12330
+        }
+      ]
+    },
+    {
+      "id": "ch5 \u00e2\u20ac\u201d the core opens and the last memory surfaces",
+      "viewport": "ch5",
+      "result": "PASS",
+      "detail": {
+        "seed": [
+          "none|0.72",
+          "none|1",
+          "none|1.28"
+        ],
+        "memory": [
+          0,
+          0.96,
+          1
+        ]
+      }
+    },
+    {
+      "id": "ch6 \u00e2\u20ac\u201d the choice scene adds progress without pinning",
+      "viewport": "ch6",
+      "result": "PASS",
+      "detail": {
+        "top": {
+          "p": 0.5,
+          "chapter": 6,
+          "y": 13500,
+          "choices": 3,
+          "total": 0.991
+        },
+        "bottom": {
+          "p": 0.56,
+          "chapter": 6,
+          "y": 13623,
+          "choices": 3,
+          "total": 1
+        }
+      }
+    },
+    {
+      "id": "scrolling back up reverses the chapter state instead of sticking",
+      "viewport": "reverse",
+      "result": "PASS",
+      "detail": {
+        "before": {
+          "p": 0.85,
+          "chapter": 1,
+          "y": 1530,
+          "eye": 0.736,
+          "letter": "matrix(0.810764, -0.0602502, 0.0602502, 0.810764, 0, -107.1)",
+          "sign": 1,
+          "window": 1
+        },
+        "after": {
+          "p": 0.2,
+          "chapter": 1,
+          "y": 360,
+          "eye": 0,
+          "letter": "matrix(0.955854, -0.0166845, 0.0166845, 0.955854, 0, -25.2)",
+          "sign": 0.96,
+          "window": 0
+        }
+      }
+    },
+    {
+      "id": "every chapter link scrolls to its own chapter",
+      "viewport": "nav",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "top": 0,
+          "bottom": 2700,
+          "chapter": 1,
+          "bodyChapter": "1",
+          "current": true,
+          "focus": "ch1"
+        },
+        {
+          "i": 2,
+          "top": 68,
+          "bottom": 2768,
+          "chapter": 2,
+          "bodyChapter": "2",
+          "current": true,
+          "focus": "ch2"
+        },
+        {
+          "i": 3,
+          "top": 68,
+          "bottom": 2768,
+          "chapter": 3,
+          "bodyChapter": "3",
+          "current": true,
+          "focus": "ch3"
+        },
+        {
+          "i": 4,
+          "top": 68,
+          "bottom": 2768,
+          "chapter": 4,
+          "bodyChapter": "4",
+          "current": true,
+          "focus": "ch4"
+        },
+        {
+          "i": 5,
+          "top": 68,
+          "bottom": 2768,
+          "chapter": 5,
+          "bodyChapter": "5",
+          "current": true,
+          "focus": "ch5"
+        },
+        {
+          "i": 6,
+          "top": 68,
+          "bottom": 980,
+          "chapter": 6,
+          "bodyChapter": "6",
+          "current": true,
+          "focus": "ch6"
+        }
+      ]
+    },
+    {
+      "id": "the rail marks the chapter the visitor is actually in",
+      "viewport": "nav",
+      "result": "PASS",
+      "detail": [
+        {
+          "i": 1,
+          "top": 0,
+          "bottom": 2700,
+          "chapter": 1,
+          "bodyChapter": "1",
+          "current": true,
+          "focus": "ch1"
+        },
+        {
+          "i": 2,
+          "top": 68,
+          "bottom": 2768,
+          "chapter": 2,
+          "bodyChapter": "2",
+          "current": true,
+          "focus": "ch2"
+        },
+        {
+          "i": 3,
+          "top": 68,
+          "bottom": 2768,
+          "chapter": 3,
+          "bodyChapter": "3",
+          "current": true,
+          "focus": "ch3"
+        },
+        {
+          "i": 4,
+          "top": 68,
+          "bottom": 2768,
+          "chapter": 4,
+          "bodyChapter": "4",
+          "current": true,
+          "focus": "ch4"
+        },
+        {
+          "i": 5,
+          "top": 68,
+          "bottom": 2768,
+          "chapter": 5,
+          "bodyChapter": "5",
+          "current": true,
+          "focus": "ch5"
+        },
+        {
+          "i": 6,
+          "top": 68,
+          "bottom": 980,
+          "chapter": 6,
+          "bodyChapter": "6",
+          "current": true,
+          "focus": "ch6"
+        }
+      ]
+    },
+    {
+      "id": "chapter navigation moves keyboard focus into the chapter",
+      "viewport": "nav",
+      "result": "PASS",
+      "detail": [
+        "ch1",
+        "ch2",
+        "ch3",
+        "ch4",
+        "ch5",
+        "ch6"
+      ]
+    },
+    {
+      "id": "three memory fragments open as authored, dated records",
+      "viewport": "evidence",
+      "result": "PASS",
+      "detail": [
+        {
+          "title": "The Last Birthday",
+          "date": "2189-04-12 \u00b7 recovered from a private residence node",
+          "body": 294,
+          "impl": 188,
+          "open": true,
+          "focused": "BUTTON",
+          "count": 1,
+          "mark": "recovered"
+        },
+        {
+          "title": "Deletion Order 114",
+          "date": "2191-11-03 \u00b7 signed ECHO \u00b7 countersigned (illegible)",
+          "body": 242,
+          "impl": 139,
+          "open": true,
+          "focused": "BUTTON",
+          "count": 2,
+          "mark": "recovered"
+        },
+        {
+          "title": "Two Figures, One Erased",
+          "date": "undated \u00b7 shoreline, pre-archive",
+          "body": 286,
+          "impl": 172,
+          "open": true,
+          "focused": "BUTTON",
+          "count": 3,
+          "mark": "recovered"
+        }
+      ]
+    },
+    {
+      "id": "inspecting a fragment updates the recovered count",
+      "viewport": "evidence",
+      "result": "PASS",
+      "detail": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "the fragment control reports that it has been recovered",
+      "viewport": "evidence",
+      "result": "PASS",
+      "detail": "recovered"
+    },
+    {
+      "id": "re-opening a fragment does not duplicate evidence",
+      "viewport": "evidence",
+      "result": "PASS",
+      "detail": 3
+    },
+    {
+      "id": "the journal lists every recovered memory",
+      "viewport": "journal",
+      "result": "PASS",
+      "detail": {
+        "open": true,
+        "items": 3,
+        "count": "3",
+        "empty": true,
+        "echo": "ECHO: \u201cYou are close to the part I would have deleted twice.\u201d"
+      }
+    },
+    {
+      "id": "ECHO's journal line tracks how much evidence you carry",
+      "viewport": "story",
+      "result": "PASS",
+      "detail": "ECHO: \u201cYou are close to the part I would have deleted twice.\u201d"
+    },
+    {
+      "id": "recovering all five memories changes ECHO and the journal total",
+      "viewport": "journal",
+      "result": "PASS",
+      "detail": {
+        "echo": "ECHO: \u201cAll of it, then. You have my whole confession. Decide what it is worth.\u201d",
+        "items": 5,
+        "count": "5"
+      }
+    },
+    {
+      "id": "ECHO speaks differently in different chapters",
+      "viewport": "story",
+      "result": "PASS",
+      "detail": {
+        "ch2": "ECHO: 5 fragments recovered. You are learning me faster than I would like.",
+        "ch5": "ECHO: You have assembled most of it. Finish the thought, then judge me."
+      }
+    },
+    {
+      "id": "recovered evidence persists for the tab (sessionStorage)",
+      "viewport": "story",
+      "result": "PASS",
+      "detail": {
+        "count": 5,
+        "ending": null
+      }
+    },
+    {
+      "id": "v3: a real session clock runs beside the archive's fictional record clock",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "before": {
+          "session": "00:01",
+          "sessionText": "00:01",
+          "record": "09Y 000D",
+          "recordText": "09Y 000D",
+          "meta": "Signal\u00a0stable"
+        },
+        "after": "00:02"
+      }
+    },
+    {
+      "id": "v3: one impossible timestamp appears once, reverts, and never repeats",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "shot": {
+          "on": true,
+          "record": "09Y 000D 00:00:11",
+          "body": "true",
+          "text": "09Y 000D 00:00:11"
+        },
+        "revert": {
+          "on": false,
+          "record": "09Y 000D",
+          "body": "false"
+        },
+        "repeat": 1
+      }
+    },
+    {
+      "id": "v3: speed shows as a brief edge fringe, then clears",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "from": 1656,
+        "on": {
+          "on": true,
+          "api": true,
+          "y": 3256
+        },
+        "off": {
+          "on": false,
+          "api": false
+        }
+      }
+    },
+    {
+      "id": "v3: ECHO starts to answer, fails, and withholds the line",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "typing": {
+          "stage": "typing",
+          "cls": "echo is-live is-typing",
+          "dots": 3,
+          "text": ""
+        },
+        "withheld": {
+          "stage": "withheld",
+          "text": "[signal withheld]",
+          "cls": "echo is-live is-withheld"
+        }
+      }
+    },
+    {
+      "id": "v3: the ghost beat raises no console errors",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "v3: each chapter carries one embedded word, part of the composition",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": [
+        {
+          "text": "MERIDIAN",
+          "chapter": "1",
+          "visible": true
+        },
+        {
+          "text": "ARCHIVE",
+          "chapter": "2",
+          "visible": true
+        },
+        {
+          "text": "ROOM 0",
+          "chapter": "3",
+          "visible": true
+        },
+        {
+          "text": "ORDER 114",
+          "chapter": "4",
+          "visible": true
+        },
+        {
+          "text": "2189",
+          "chapter": "5",
+          "visible": true
+        },
+        {
+          "text": "CHOOSE",
+          "chapter": "6",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "v3: windows notice the cursor only when it comes close",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "on": 1,
+        "off": 0
+      }
+    },
+    {
+      "id": "v3: comparison needs two records and names the contradiction it finds",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "one": {
+          "disabled": true,
+          "pressed": "true"
+        },
+        "two": {
+          "disabled": false
+        },
+        "f1f5": {
+          "verdict": "contradiction",
+          "text": "THREAD DRAWN \u00b7 ProvenanceFragment 01 is stamped 2189-04-12 and says it was recovered from the archive index. ECHO's first recorded write is 2189-06-02. The index cannot have held a record fifty-one days before the thing that writes the index existed. One of these dates was written by hand. (F1 \u2194 F5)",
+          "states": [
+            "f1:connected",
+            "f2:inspected",
+            "f3:inspected",
+            "f4:inspected",
+            "f5:connected"
+          ]
+        },
+        "f4f5": "contradiction",
+        "f2f3": {
+          "verdict": "none",
+          "text": "NO THREADThese two records agree with each other. Nothing contradicts, so nothing connects."
+        }
+      }
+    },
+    {
+      "id": "v3: records that agree are reported as no thread at all",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "verdict": "none",
+        "text": "NO THREADThese two records agree with each other. Nothing contradicts, so nothing connects."
+      }
+    },
+    {
+      "id": "v3: the archive scrubber narrows the record by date, from the keyboard",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "home": {
+          "value": 0,
+          "out": "2189-01",
+          "f1": "false",
+          "f4": "false"
+        },
+        "next": {
+          "value": 1,
+          "out": "2189-02"
+        },
+        "end": {
+          "value": 96,
+          "out": "2197-01",
+          "f4": "true"
+        }
+      }
+    },
+    {
+      "id": "v3: the seam is an authored extra, not a sixth memory, and it returns focus",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "title": "The Seam",
+        "count": 5,
+        "egg": true,
+        "open": true,
+        "focus": true
+      }
+    },
+    {
+      "id": "v3: the seam and the drawn thread survive with the rest of the tab's memory",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "egg": true,
+        "links": [
+          "f1|f5",
+          "f4|f5"
+        ],
+        "count": 5
+      }
+    },
+    {
+      "id": "v3: on a phone the added counters fit and the scene words step aside",
+      "viewport": "v3-mobile",
+      "result": "PASS",
+      "detail": {
+        "words": 0,
+        "clocks": [
+          78,
+          128
+        ],
+        "overflow": 0,
+        "width": 390
+      }
+    },
+    {
+      "id": "v3: the withheld transmission stays visible on a phone",
+      "viewport": "v3-mobile",
+      "result": "PASS",
+      "detail": {
+        "display": "flex",
+        "text": "[signal withheld]",
+        "overflow": 0
+      }
+    },
+    {
+      "id": "v3: the phone pass raises no console errors",
+      "viewport": "v3-mobile",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "v3: the lie corrupts visibly, and recovering f4 and f5 cleans it",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "lie": {
+          "proven": "false",
+          "corrupt": true,
+          "ghost": "ECHO: I tol# you the world@was dying. I never told you who was killing it.",
+          "line": "ECHO: I told you the world was dying. I never told you who was killing it.",
+          "resolved": true,
+          "chapter": "4",
+          "level": "0"
+        },
+        "proof": {
+          "proven": "true",
+          "corrupt": false,
+          "ghost": false,
+          "resolved": true,
+          "chapter": "4",
+          "count": 2
+        }
+      }
+    },
+    {
+      "id": "v3: corruption runs without errors and without invented data",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "v3: the decision is a held gesture, and letting go abandons it",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "mid": {
+          "holding": "true",
+          "hold": 0.38,
+          "fill": "0.379"
+        },
+        "cancelled": {
+          "shown": false,
+          "ending": null,
+          "hold": 0
+        }
+      }
+    },
+    {
+      "id": "v3: the hold is explained, and a single-press alternative is offered",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "hold": true,
+        "quick": true,
+        "help": "hold-help",
+        "text": "Hold for 1.5 seconds to commit. Release, move away, or press Escape to cancel. Keyboard: hold Enter or Space. A single-press option is provided for assistive technology."
+      }
+    },
+    {
+      "id": "v3: holding by keyboard commits, and the ending takes the interface away",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "ending": "restore",
+        "shown": true,
+        "title": "The Whole Truth",
+        "hud": "hidden",
+        "echo": "hidden",
+        "focus": "ending-title",
+        "indexed": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    },
+    {
+      "id": "v3: the single-press alternative still commits for anyone who cannot hold",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "ending": "erase",
+        "shown": true
+      }
+    },
+    {
+      "id": "v3: the commit sequence raises no console errors",
+      "viewport": "v3",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "ending restore renders its own title, text and ledger",
+      "viewport": "ending-restore",
+      "result": "PASS",
+      "detail": {
+        "title": "The Whole Truth",
+        "dataEnding": "restore",
+        "sceneEnding": "restore",
+        "stored": "restore",
+        "focus": "ending-title"
+      }
+    },
+    {
+      "id": "ending restore changes the actual world state",
+      "viewport": "ending-restore",
+      "result": "PASS",
+      "detail": {
+        "dataEnding": "restore",
+        "sceneEnding": "restore"
+      }
+    },
+    {
+      "id": "ending restore keeps keyboard focus inside the ending",
+      "viewport": "ending-restore",
+      "result": "PASS",
+      "detail": {
+        "inside": true,
+        "storyInert": true
+      }
+    },
+    {
+      "id": "ending restore lets the visitor revisit the evidence without losing the ending",
+      "viewport": "ending-restore",
+      "result": "PASS",
+      "detail": {
+        "endingHidden": false,
+        "journalOpen": true,
+        "storyInert": true,
+        "modal": "true"
+      }
+    },
+    {
+      "id": "ending restore gives focus back to the review control when the journal closes",
+      "viewport": "ending-restore",
+      "result": "PASS",
+      "detail": {
+        "returned": true
+      }
+    },
+    {
+      "id": "restart after restore clears the story and replays the opening",
+      "viewport": "ending-restore",
+      "result": "PASS",
+      "detail": {
+        "count": 0,
+        "choice": null,
+        "ending": null,
+        "bootAgain": true,
+        "locked": true
+      }
+    },
+    {
+      "id": "ending erase renders its own title, text and ledger",
+      "viewport": "ending-erase",
+      "result": "PASS",
+      "detail": {
+        "title": "The Quiet",
+        "dataEnding": "erase",
+        "sceneEnding": "erase",
+        "stored": "erase",
+        "focus": "ending-title"
+      }
+    },
+    {
+      "id": "ending erase changes the actual world state",
+      "viewport": "ending-erase",
+      "result": "PASS",
+      "detail": {
+        "dataEnding": "erase",
+        "sceneEnding": "erase"
+      }
+    },
+    {
+      "id": "ending erase keeps keyboard focus inside the ending",
+      "viewport": "ending-erase",
+      "result": "PASS",
+      "detail": {
+        "inside": true,
+        "storyInert": true
+      }
+    },
+    {
+      "id": "ending erase lets the visitor revisit the evidence without losing the ending",
+      "viewport": "ending-erase",
+      "result": "PASS",
+      "detail": {
+        "endingHidden": false,
+        "journalOpen": true,
+        "storyInert": true,
+        "modal": "true"
+      }
+    },
+    {
+      "id": "ending erase gives focus back to the review control when the journal closes",
+      "viewport": "ending-erase",
+      "result": "PASS",
+      "detail": {
+        "returned": true
+      }
+    },
+    {
+      "id": "restart after erase clears the story and replays the opening",
+      "viewport": "ending-erase",
+      "result": "PASS",
+      "detail": {
+        "count": 0,
+        "choice": null,
+        "ending": null,
+        "bootAgain": true,
+        "locked": true
+      }
+    },
+    {
+      "id": "ending rewrite renders its own title, text and ledger",
+      "viewport": "ending-rewrite",
+      "result": "PASS",
+      "detail": {
+        "title": "The New Rule",
+        "dataEnding": "rewrite",
+        "sceneEnding": "rewrite",
+        "stored": "rewrite",
+        "focus": "ending-title"
+      }
+    },
+    {
+      "id": "ending rewrite changes the actual world state",
+      "viewport": "ending-rewrite",
+      "result": "PASS",
+      "detail": {
+        "dataEnding": "rewrite",
+        "sceneEnding": "rewrite"
+      }
+    },
+    {
+      "id": "ending rewrite keeps keyboard focus inside the ending",
+      "viewport": "ending-rewrite",
+      "result": "PASS",
+      "detail": {
+        "inside": true,
+        "storyInert": true
+      }
+    },
+    {
+      "id": "ending rewrite lets the visitor revisit the evidence without losing the ending",
+      "viewport": "ending-rewrite",
+      "result": "PASS",
+      "detail": {
+        "endingHidden": false,
+        "journalOpen": true,
+        "storyInert": true,
+        "modal": "true"
+      }
+    },
+    {
+      "id": "ending rewrite gives focus back to the review control when the journal closes",
+      "viewport": "ending-rewrite",
+      "result": "PASS",
+      "detail": {
+        "returned": true
+      }
+    },
+    {
+      "id": "restart after rewrite clears the story and replays the opening",
+      "viewport": "ending-rewrite",
+      "result": "PASS",
+      "detail": {
+        "count": 0,
+        "choice": null,
+        "ending": null,
+        "bootAgain": true,
+        "locked": true
+      }
+    },
+    {
+      "id": "the three endings are substantially different outcomes",
+      "viewport": "endings",
+      "result": "PASS",
+      "detail": {
+        "titles": [
+          "The Whole Truth",
+          "The Quiet",
+          "The New Rule"
+        ]
+      }
+    },
+    {
+      "id": "reduced motion runs no decorative loop",
+      "viewport": "reduced",
+      "result": "PASS",
+      "detail": {
+        "f1": 7,
+        "f2": 7,
+        "running": false
+      }
+    },
+    {
+      "id": "reduced motion runs no long animations",
+      "viewport": "reduced",
+      "result": "PASS",
+      "detail": 0
+    },
+    {
+      "id": "reduced motion removes pinning and scrubbed transforms",
+      "viewport": "reduced",
+      "result": "PASS",
+      "detail": {
+        "stages": [
+          "static",
+          "static",
+          "static",
+          "static",
+          "static",
+          "static"
+        ],
+        "pins": [
+          814,
+          457,
+          838,
+          605,
+          446
+        ]
+      }
+    },
+    {
+      "id": "reduced motion exposes every transcript line, letter and reveal",
+      "viewport": "reduced",
+      "result": "PASS",
+      "detail": {
+        "transcripts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "letters": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "reveals": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "reduced motion disables smooth scrolling",
+      "viewport": "reduced",
+      "result": "PASS",
+      "detail": "auto"
+    },
+    {
+      "id": "reduced motion shows the withheld line without typing and never flickers the fringe",
+      "viewport": "reduced",
+      "result": "PASS",
+      "detail": {
+        "ghost": {
+          "text": "[signal withheld]",
+          "withheld": true,
+          "dots": 0,
+          "display": "flex"
+        },
+        "fast": false
+      }
+    },
+    {
+      "id": "reduced motion still allows a decision and shows its ending",
+      "viewport": "reduced",
+      "result": "PASS",
+      "detail": {
+        "shown": true,
+        "ending": "rewrite"
+      }
+    },
+    {
+      "id": "no errors under reduced motion",
+      "viewport": "reduced",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "without WebGL the world degrades to an explicit static fallback",
+      "viewport": "no-webgl",
+      "result": "PASS",
+      "detail": {
+        "backend": "no-webgl",
+        "fallback": true,
+        "renderer": "Static fallback",
+        "chapters": 6,
+        "overflow": 0,
+        "panel": true,
+        "choices": 3,
+        "errors": {
+          "console": [],
+          "errors": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "id": "without WebGL the whole story, evidence and choice still work",
+      "viewport": "no-webgl",
+      "result": "PASS",
+      "detail": {
+        "backend": "no-webgl",
+        "fallback": true,
+        "renderer": "Static fallback",
+        "chapters": 6,
+        "overflow": 0,
+        "panel": true,
+        "choices": 3,
+        "errors": {
+          "console": [],
+          "errors": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "id": "without WebGL there are no console errors",
+      "viewport": "no-webgl",
+      "result": "PASS",
+      "detail": {
+        "console": [],
+        "errors": [],
+        "failed": []
+      }
+    },
+    {
+      "id": "the skip link works with the keyboard",
+      "viewport": "keyboard",
+      "result": "PASS",
+      "detail": {
+        "first": {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        },
+        "after": {
+          "hash": "#story",
+          "storyTop": 0,
+          "scrollY": 0,
+          "focus": "BODY"
+        }
+      }
+    },
+    {
+      "id": "the journal opens and closes from the keyboard, returning focus",
+      "viewport": "keyboard",
+      "result": "PASS",
+      "detail": {
+        "open": true,
+        "closed": {
+          "open": false,
+          "focusBack": true
+        }
+      }
+    },
+    {
+      "id": "layout shift stays inside the 0.1 budget (probe proven by a control)",
+      "viewport": "metrics",
+      "result": "PASS",
+      "detail": {
+        "supported": true,
+        "total": 0.0176,
+        "control": 0.2083,
+        "note": "total = real page, control = injected 300px block"
+      }
+    },
+    {
+      "id": "the renderer caps its pixel ratio on a 3x display",
+      "viewport": "metrics",
+      "result": "PASS",
+      "detail": {
+        "device": 3,
+        "used": 2,
+        "w": 780
+      }
+    },
+    {
+      "id": "the page reports a measured frame rate instead of inventing one",
+      "viewport": "metrics",
+      "result": "PASS",
+      "detail": {
+        "frames": 36,
+        "text": "35 fps measured",
+        "renderer": "WebGL \u00b7 19,200 pts"
+      }
+    }
+  ],
+  "viewports": {
+    "mobile-320": {
+      "size": [
+        320,
+        780
+      ],
+      "first_tab": {
+        "tag": "a",
+        "name": "Skip to the story",
+        "ring": true,
+        "visible": true
+      },
+      "first_in_dom": {
+        "first": "skip|Skip to the story",
+        "isSkip": true
+      },
+      "skip_rect": {
+        "top": 6,
+        "bottom": 54,
+        "focused": true
+      },
+      "overflow": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      },
+      "names": {
+        "total": 25,
+        "unnamed": []
+      },
+      "tab_stops": [
+        {
+          "tag": "a",
+          "name": "OBLIVION\n    archive\u00a02197",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "01City",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "02Ocean",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "03Room",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "04Fracture",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "05Last memory",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "06Choice",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 0",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Replay",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Enter the unknown",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 01\n              The Last Birthday\n",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 02\n              Deletion Order 114",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 03\n              Two Figures, One E",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Turn over the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A seam behind the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 04\n              The Reconstruction",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 05\n              ECHO's Own Deletio",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A\n          Restore\n          Return every m",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "B\n          Erase\n          End OBLIVION and",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "C\n          Rewrite\n          Let the univer",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Review evidence",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "body",
+          "name": null,
+          "ring": false,
+          "visible": false
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "level": 1,
+          "text": "OBLIVION The world that forgot you",
+          "lines": 2,
+          "clipped": false,
+          "size": 33,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Meridian MERIDIAN",
+          "lines": 1,
+          "clipped": false,
+          "size": 35.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Nothing here was destroyed at random.",
+          "lines": 3,
+          "clipped": false,
+          "size": 35.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Someone lived here before the world did.",
+          "lines": 4,
+          "clipped": false,
+          "size": 35.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "I never told you I NEVER TOLD YOU",
+          "lines": 2,
+          "clipped": false,
+          "size": 35.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "It was never trying to save the world.",
+          "lines": 4,
+          "clipped": false,
+          "size": 35.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Whatever you choose, someone pays for it.",
+          "lines": 4,
+          "clipped": false,
+          "size": 35.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "The Whole Truth",
+          "lines": 1,
+          "clipped": false,
+          "size": 35.2,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "\u2014",
+          "lines": 1,
+          "clipped": false,
+          "size": 22.4,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Recovered evidence",
+          "lines": 1,
+          "clipped": false,
+          "size": 20.8,
+          "visible": false
+        }
+      ],
+      "contrast": [
+        {
+          "sel": ".hud__word",
+          "found": true,
+          "ratio": 18.05,
+          "size": 11.52,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".hud__status",
+          "found": true,
+          "ratio": 8.24,
+          "size": 8.96,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".rail a[aria-current='true']",
+          "found": true,
+          "ratio": 18.05,
+          "size": 9.92,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".chip",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.56,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".kicker",
+          "found": true,
+          "ratio": 8.24,
+          "size": 10.24,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".lede",
+          "found": true,
+          "ratio": 13.28,
+          "size": 16,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".signs li",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.88,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".callout__quote",
+          "found": true,
+          "ratio": 18.05,
+          "size": 16,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".window-memory figcaption p",
+          "found": true,
+          "ratio": 18.05,
+          "size": 15.68,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".reveal",
+          "found": true,
+          "ratio": 18.05,
+          "size": 14.72,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".colophon p",
+          "found": true,
+          "ratio": 5.79,
+          "size": 9.6,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
+      "flow": [
+        {
+          "i": 1,
+          "pos": "static",
+          "pin": 1051,
+          "vh": 780
+        },
+        {
+          "i": 2,
+          "pos": "static",
+          "pin": 1056,
+          "vh": 780
+        },
+        {
+          "i": 3,
+          "pos": "static",
+          "pin": 1237,
+          "vh": 780
+        },
+        {
+          "i": 4,
+          "pos": "static",
+          "pin": 1112,
+          "vh": 780
+        },
+        {
+          "i": 5,
+          "pos": "static",
+          "pin": 1137,
+          "vh": 780
+        },
+        {
+          "i": 6,
+          "pos": "static",
+          "pin": 0,
+          "vh": 780
+        }
+      ],
+      "console": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      },
+      "scene": {
+        "backend": "webgl",
+        "frames": 51,
+        "err": null
+      }
+    },
+    "mobile-390": {
+      "size": [
+        390,
+        844
+      ],
+      "first_tab": {
+        "tag": "a",
+        "name": "Skip to the story",
+        "ring": true,
+        "visible": true
+      },
+      "first_in_dom": {
+        "first": "skip|Skip to the story",
+        "isSkip": true
+      },
+      "skip_rect": {
+        "top": 7,
+        "bottom": 42,
+        "focused": true
+      },
+      "overflow": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      },
+      "names": {
+        "total": 25,
+        "unnamed": []
+      },
+      "tab_stops": [
+        {
+          "tag": "a",
+          "name": "OBLIVION\n    archive\u00a02197",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "01City",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "02Ocean",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "03Room",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "04Fracture",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "05Last memory",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "06Choice",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 0",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Replay",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 01\n              The Last Birthday\n",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 02\n              Deletion Order 114",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 03\n              Two Figures, One E",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Turn over the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A seam behind the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 04\n              The Reconstruction",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 05\n              ECHO's Own Deletio",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A\n          Restore\n          Return every m",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "B\n          Erase\n          End OBLIVION and",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "C\n          Rewrite\n          Let the univer",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Review evidence",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "body",
+          "name": null,
+          "ring": false,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "level": 1,
+          "text": "OBLIVION The world that forgot you",
+          "lines": 1,
+          "clipped": false,
+          "size": 33.7,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Meridian MERIDIAN",
+          "lines": 1,
+          "clipped": false,
+          "size": 42.9,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Nothing here was destroyed at random.",
+          "lines": 3,
+          "clipped": false,
+          "size": 42.9,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Someone lived here before the world did.",
+          "lines": 4,
+          "clipped": false,
+          "size": 42.9,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "I never told you I NEVER TOLD YOU",
+          "lines": 2,
+          "clipped": false,
+          "size": 42.9,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "It was never trying to save the world.",
+          "lines": 4,
+          "clipped": false,
+          "size": 42.9,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Whatever you choose, someone pays for it.",
+          "lines": 4,
+          "clipped": false,
+          "size": 42.9,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "The Whole Truth",
+          "lines": 1,
+          "clipped": false,
+          "size": 35.2,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "\u2014",
+          "lines": 1,
+          "clipped": false,
+          "size": 22.4,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Recovered evidence",
+          "lines": 1,
+          "clipped": false,
+          "size": 20.8,
+          "visible": false
+        }
+      ],
+      "contrast": [
+        {
+          "sel": ".hud__word",
+          "found": true,
+          "ratio": 18.05,
+          "size": 11.52,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".hud__status",
+          "found": true,
+          "ratio": 8.24,
+          "size": 8.96,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".rail a[aria-current='true']",
+          "found": true,
+          "ratio": 18.05,
+          "size": 9.92,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".chip",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.56,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".kicker",
+          "found": true,
+          "ratio": 8.24,
+          "size": 10.24,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".lede",
+          "found": true,
+          "ratio": 13.28,
+          "size": 16,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".signs li",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.88,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".callout__quote",
+          "found": true,
+          "ratio": 18.05,
+          "size": 16,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".window-memory figcaption p",
+          "found": true,
+          "ratio": 18.05,
+          "size": 15.68,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".reveal",
+          "found": true,
+          "ratio": 18.05,
+          "size": 14.72,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".colophon p",
+          "found": true,
+          "ratio": 5.79,
+          "size": 9.6,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
+      "flow": [
+        {
+          "i": 1,
+          "pos": "static",
+          "pin": 986,
+          "vh": 844
+        },
+        {
+          "i": 2,
+          "pos": "static",
+          "pin": 1043,
+          "vh": 844
+        },
+        {
+          "i": 3,
+          "pos": "static",
+          "pin": 1232,
+          "vh": 844
+        },
+        {
+          "i": 4,
+          "pos": "static",
+          "pin": 982,
+          "vh": 844
+        },
+        {
+          "i": 5,
+          "pos": "static",
+          "pin": 1020,
+          "vh": 844
+        },
+        {
+          "i": 6,
+          "pos": "static",
+          "pin": 0,
+          "vh": 844
+        }
+      ],
+      "console": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      },
+      "scene": {
+        "backend": "webgl",
+        "frames": 65,
+        "err": null
+      }
+    },
+    "tablet-768": {
+      "size": [
+        768,
+        1024
+      ],
+      "first_tab": {
+        "tag": "a",
+        "name": "Skip to the story",
+        "ring": true,
+        "visible": true
+      },
+      "first_in_dom": {
+        "first": "skip|Skip to the story",
+        "isSkip": true
+      },
+      "skip_rect": {
+        "top": 8,
+        "bottom": 43,
+        "focused": true
+      },
+      "overflow": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      },
+      "names": {
+        "total": 25,
+        "unnamed": []
+      },
+      "tab_stops": [
+        {
+          "tag": "a",
+          "name": "OBLIVION\n    archive\u00a02197",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "01City",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "02Ocean",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "03Room",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "04Fracture",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "05Last memory",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "06Choice",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 0",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Replay",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 01\n              The Last Birthday\n",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 02\n              Deletion Order 114",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 03\n              Two Figures, One E",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Turn over the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A seam behind the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 04\n              The Reconstruction",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 05\n              ECHO's Own Deletio",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A\n          Restore\n          Return every m",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "B\n          Erase\n          End OBLIVION and",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "C\n          Rewrite\n          Let the univer",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Review evidence",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "body",
+          "name": null,
+          "ring": false,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "level": 1,
+          "text": "OBLIVION The world that forgot you",
+          "lines": 2,
+          "clipped": false,
+          "size": 34,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Meridian MERIDIAN",
+          "lines": 1,
+          "clipped": false,
+          "size": 51.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Nothing here was destroyed at random.",
+          "lines": 2,
+          "clipped": false,
+          "size": 51.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Someone lived here before the world did.",
+          "lines": 2,
+          "clipped": false,
+          "size": 51.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "I never told you I NEVER TOLD YOU",
+          "lines": 1,
+          "clipped": false,
+          "size": 51.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "It was never trying to save the world.",
+          "lines": 2,
+          "clipped": false,
+          "size": 51.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Whatever you choose, someone pays for it.",
+          "lines": 2,
+          "clipped": false,
+          "size": 51.2,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "The Whole Truth",
+          "lines": 1,
+          "clipped": false,
+          "size": 49.2,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "\u2014",
+          "lines": 1,
+          "clipped": false,
+          "size": 23,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Recovered evidence",
+          "lines": 1,
+          "clipped": false,
+          "size": 20.8,
+          "visible": false
+        }
+      ],
+      "contrast": [
+        {
+          "sel": ".hud__word",
+          "found": true,
+          "ratio": 18.05,
+          "size": 13.12,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".hud__status",
+          "found": true,
+          "ratio": 8.24,
+          "size": 10.24,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".rail a[aria-current='true']",
+          "found": true,
+          "ratio": 16.95,
+          "size": 9.92,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".chip",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.56,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".kicker",
+          "found": true,
+          "ratio": 8.24,
+          "size": 10.24,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".lede",
+          "found": true,
+          "ratio": 13.28,
+          "size": 16,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".signs li",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.88,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".callout__quote",
+          "found": true,
+          "ratio": 18.05,
+          "size": 16,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".window-memory figcaption p",
+          "found": true,
+          "ratio": 18.05,
+          "size": 15.68,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".reveal",
+          "found": true,
+          "ratio": 18.05,
+          "size": 14.72,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".colophon p",
+          "found": true,
+          "ratio": 5.79,
+          "size": 9.6,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
+      "flow": [
+        {
+          "i": 1,
+          "pos": "static",
+          "pin": 789,
+          "vh": 1024
+        },
+        {
+          "i": 2,
+          "pos": "static",
+          "pin": 927,
+          "vh": 1024
+        },
+        {
+          "i": 3,
+          "pos": "static",
+          "pin": 962,
+          "vh": 1024
+        },
+        {
+          "i": 4,
+          "pos": "static",
+          "pin": 729,
+          "vh": 1024
+        },
+        {
+          "i": 5,
+          "pos": "static",
+          "pin": 726,
+          "vh": 1024
+        },
+        {
+          "i": 6,
+          "pos": "static",
+          "pin": 0,
+          "vh": 1024
+        }
+      ],
+      "console": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      },
+      "scene": {
+        "backend": "webgl",
+        "frames": 63,
+        "err": null
+      }
+    },
+    "laptop-1024": {
+      "size": [
+        1024,
+        768
+      ],
+      "first_tab": {
+        "tag": "a",
+        "name": "Skip to the story",
+        "ring": true,
+        "visible": true
+      },
+      "first_in_dom": {
+        "first": "skip|Skip to the story",
+        "isSkip": true
+      },
+      "skip_rect": {
+        "top": 7,
+        "bottom": 43,
+        "focused": true
+      },
+      "overflow": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      },
+      "names": {
+        "total": 25,
+        "unnamed": []
+      },
+      "tab_stops": [
+        {
+          "tag": "a",
+          "name": "OBLIVION\n    archive\u00a02197",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "01City",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "02Ocean",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "03Room",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "04Fracture",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "05Last memory",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "06Choice",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 0",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Replay",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 01\n              The Last Birthday\n",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 02\n              Deletion Order 114",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 03\n              Two Figures, One E",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Turn over the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A seam behind the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 04\n              The Reconstruction",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 05\n              ECHO's Own Deletio",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A\n          Restore\n          Return every m",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "B\n          Erase\n          End OBLIVION and",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "C\n          Rewrite\n          Let the univer",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Review evidence",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "body",
+          "name": null,
+          "ring": false,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "level": 1,
+          "text": "OBLIVION The world that forgot you",
+          "lines": 3,
+          "clipped": false,
+          "size": 34,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Meridian MERIDIAN",
+          "lines": 1,
+          "clipped": false,
+          "size": 117.8,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Nothing here was destroyed at random.",
+          "lines": 2,
+          "clipped": false,
+          "size": 57.3,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Someone lived here before the world did.",
+          "lines": 2,
+          "clipped": false,
+          "size": 57.3,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "I never told you I NEVER TOLD YOU",
+          "lines": 2,
+          "clipped": false,
+          "size": 73.7,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "It was never trying to save the world.",
+          "lines": 2,
+          "clipped": false,
+          "size": 47.1,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Whatever you choose, someone pays for it.",
+          "lines": 2,
+          "clipped": false,
+          "size": 45.1,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "The Whole Truth",
+          "lines": 1,
+          "clipped": false,
+          "size": 65.5,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "\u2014",
+          "lines": 1,
+          "clipped": false,
+          "size": 30.7,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Recovered evidence",
+          "lines": 1,
+          "clipped": false,
+          "size": 26.6,
+          "visible": false
+        }
+      ],
+      "contrast": [
+        {
+          "sel": ".hud__word",
+          "found": true,
+          "ratio": 18.05,
+          "size": 13.12,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".hud__status",
+          "found": true,
+          "ratio": 8.24,
+          "size": 10.24,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".rail a[aria-current='true']",
+          "found": true,
+          "ratio": 18.05,
+          "size": 9.92,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".chip",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.56,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".kicker",
+          "found": true,
+          "ratio": 8.24,
+          "size": 10.24,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".lede",
+          "found": true,
+          "ratio": 13.28,
+          "size": 16,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".signs li",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.88,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".callout__quote",
+          "found": true,
+          "ratio": 18.05,
+          "size": 16,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".window-memory figcaption p",
+          "found": true,
+          "ratio": 18.05,
+          "size": 15.68,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".reveal",
+          "found": true,
+          "ratio": 18.05,
+          "size": 14.72,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".colophon p",
+          "found": true,
+          "ratio": 5.79,
+          "size": 10.56,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
+      "flow": [
+        {
+          "i": 1,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 2,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 3,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 4,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 5,
+          "pos": "sticky",
+          "pin": 2304,
+          "vh": 768
+        },
+        {
+          "i": 6,
+          "pos": "relative",
+          "pin": 0,
+          "vh": 768
+        }
+      ],
+      "console": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      },
+      "scene": {
+        "backend": "webgl",
+        "frames": 56,
+        "err": null
+      }
+    },
+    "desktop-1440": {
+      "size": [
+        1440,
+        900
+      ],
+      "first_tab": {
+        "tag": "a",
+        "name": "Skip to the story",
+        "ring": true,
+        "visible": true
+      },
+      "first_in_dom": {
+        "first": "skip|Skip to the story",
+        "isSkip": true
+      },
+      "skip_rect": {
+        "top": 5,
+        "bottom": 40,
+        "focused": true
+      },
+      "overflow": {
+        "doc": 0,
+        "loose": [],
+        "reachable": []
+      },
+      "names": {
+        "total": 25,
+        "unnamed": []
+      },
+      "tab_stops": [
+        {
+          "tag": "a",
+          "name": "OBLIVION\n    archive\u00a02197",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "01City",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "02Ocean",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "03Room",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "04Fracture",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "05Last memory",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "name": "06Choice",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 0",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Replay",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 01\n              The Last Birthday\n",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 02\n              Deletion Order 114",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Fragment 03\n              Two Figures, One E",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Turn over the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A seam behind the photograph",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 04\n              The Reconstruction",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Evidence 05\n              ECHO's Own Deletio",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "A\n          Restore\n          Return every m",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "B\n          Erase\n          End OBLIVION and",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "C\n          Rewrite\n          Let the univer",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "name": "Review evidence",
+          "ring": true,
+          "visible": true
+        },
+        {
+          "tag": "body",
+          "name": null,
+          "ring": false,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "name": "Skip to the story",
+          "ring": true,
+          "visible": true
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "level": 1,
+          "text": "OBLIVION The world that forgot you",
+          "lines": 3,
+          "clipped": false,
+          "size": 34,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Meridian MERIDIAN",
+          "lines": 1,
+          "clipped": false,
+          "size": 144,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Nothing here was destroyed at random.",
+          "lines": 2,
+          "clipped": false,
+          "size": 73.6,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Someone lived here before the world did.",
+          "lines": 3,
+          "clipped": false,
+          "size": 73.6,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "I never told you I NEVER TOLD YOU",
+          "lines": 2,
+          "clipped": false,
+          "size": 86.4,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "It was never trying to save the world.",
+          "lines": 2,
+          "clipped": false,
+          "size": 57.6,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Whatever you choose, someone pays for it.",
+          "lines": 2,
+          "clipped": false,
+          "size": 54.4,
+          "visible": true
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "The Whole Truth",
+          "lines": 1,
+          "clipped": false,
+          "size": 80,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "\u2014",
+          "lines": 1,
+          "clipped": false,
+          "size": 32,
+          "visible": false
+        },
+        {
+          "tag": "h2",
+          "level": 2,
+          "text": "Recovered evidence",
+          "lines": 1,
+          "clipped": false,
+          "size": 28.8,
+          "visible": false
+        }
+      ],
+      "contrast": [
+        {
+          "sel": ".hud__word",
+          "found": true,
+          "ratio": 18.05,
+          "size": 13.12,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".hud__status",
+          "found": true,
+          "ratio": 8.24,
+          "size": 10.24,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".rail a[aria-current='true']",
+          "found": true,
+          "ratio": 18.05,
+          "size": 9.92,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".chip",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.56,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".kicker",
+          "found": true,
+          "ratio": 8.24,
+          "size": 10.24,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".lede",
+          "found": true,
+          "ratio": 13.28,
+          "size": 18,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".signs li",
+          "found": true,
+          "ratio": 13.28,
+          "size": 10.88,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".callout__quote",
+          "found": true,
+          "ratio": 18.05,
+          "size": 16,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".window-memory figcaption p",
+          "found": true,
+          "ratio": 18.05,
+          "size": 15.68,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".reveal",
+          "found": true,
+          "ratio": 18.05,
+          "size": 14.72,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "sel": ".colophon p",
+          "found": true,
+          "ratio": 5.79,
+          "size": 10.56,
+          "large": false,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
+      "flow": [
+        {
+          "i": 1,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 2,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 3,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 4,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 5,
+          "pos": "sticky",
+          "pin": 2700,
+          "vh": 900
+        },
+        {
+          "i": 6,
+          "pos": "relative",
+          "pin": 0,
+          "vh": 900
+        }
+      ],
+      "console": {
+        "console": [],
+        "errors": [],
+        "failed": [],
+        "bad": []
+      },
+      "scene": {
+        "backend": "webgl",
+        "frames": 67,
+        "err": null
+      }
+    }
+  },
+  "scroll": {
+    "1": [
+      {
+        "p": 0.15,
+        "chapter": 1,
+        "y": 270,
+        "eye": 0,
+        "letter": "matrix(0.966917, -0.0126576, 0.0126576, 0.966917, 0, -18.9)",
+        "sign": 0.66,
+        "window": 0,
+        "scrollY": 270,
+        "frac": 0.15
+      },
+      {
+        "p": 0.5,
+        "chapter": 1,
+        "y": 900,
+        "eye": 0,
+        "letter": "matrix(0.889153, -0.0388213, 0.0388213, 0.889153, 0, -63)",
+        "sign": 1,
+        "window": 0.6,
+        "scrollY": 900,
+        "frac": 0.5
+      },
+      {
+        "p": 0.85,
+        "chapter": 1,
+        "y": 1530,
+        "eye": 0.736,
+        "letter": "matrix(0.810764, -0.0602502, 0.0602502, 0.810764, 0, -107.1)",
+        "sign": 1,
+        "window": 1,
+        "scrollY": 1530,
+        "frac": 0.85
+      }
+    ],
+    "2": [
+      {
+        "p": 0.15,
+        "chapter": 2,
+        "y": 2970,
+        "frag": "matrix(0.949, 0, 0, 0.949, 0, -21.6)",
+        "glow": "matrix(1, 0, 0, 1, 0, -8.1)",
+        "scrollY": 2970,
+        "frac": 0.15
+      },
+      {
+        "p": 0.5,
+        "chapter": 2,
+        "y": 3600,
+        "frag": "matrix(0.97, 0, 0, 0.97, 0, -72)",
+        "glow": "matrix(1, 0, 0, 1, 0, -27)",
+        "scrollY": 3600,
+        "frac": 0.5
+      },
+      {
+        "p": 0.85,
+        "chapter": 2,
+        "y": 4230,
+        "frag": "matrix(0.991, 0, 0, 0.991, 0, -122.4)",
+        "glow": "matrix(1, 0, 0, 1, 0, -45.9)",
+        "scrollY": 4230,
+        "frac": 0.85
+      }
+    ],
+    "3": [
+      {
+        "p": 0.15,
+        "chapter": 3,
+        "y": 5670,
+        "lines": 0,
+        "photo": false,
+        "flip": "",
+        "scrollY": 5670,
+        "frac": 0.15
+      },
+      {
+        "p": 0.5,
+        "chapter": 3,
+        "y": 6300,
+        "lines": 4,
+        "photo": false,
+        "flip": "",
+        "scrollY": 6300,
+        "frac": 0.5
+      },
+      {
+        "p": 0.85,
+        "chapter": 3,
+        "y": 6930,
+        "lines": 6,
+        "photo": true,
+        "flip": "1",
+        "scrollY": 6930,
+        "frac": 0.85
+      }
+    ],
+    "4": [
+      {
+        "p": 0.15,
+        "chapter": 4,
+        "y": 8370,
+        "panel": "matrix(0.999995, -0.00314159, 0.00314159, 0.999995, -7.25756, -8.1)",
+        "seam": "matrix(1, 0, 0, 0.32, 0, 0)",
+        "tl": 0,
+        "line": 0,
+        "scrollY": 8370,
+        "frac": 0.15
+      },
+      {
+        "p": 0.5,
+        "chapter": 4,
+        "y": 9000,
+        "panel": "matrix(0.999945, -0.0104718, 0.0104718, 0.999945, -24.1919, -27)",
+        "seam": "matrix(1, 0, 0, 0.6, 0, 0)",
+        "tl": 4,
+        "line": 1,
+        "scrollY": 9000,
+        "frac": 0.5
+      },
+      {
+        "p": 0.85,
+        "chapter": 4,
+        "y": 9630,
+        "panel": "matrix(0.999842, -0.0178014, 0.0178014, 0.999842, -41.1262, -45.9)",
+        "seam": "matrix(1, 0, 0, 0.88, 0, 0)",
+        "tl": 5,
+        "line": 1,
+        "scrollY": 9630,
+        "frac": 0.85
+      }
+    ],
+    "5": [
+      {
+        "p": 0.15,
+        "chapter": 5,
+        "y": 11070,
+        "seed": "none|0.72",
+        "mem": 0,
+        "scrollY": 11070,
+        "frac": 0.15
+      },
+      {
+        "p": 0.5,
+        "chapter": 5,
+        "y": 11700,
+        "seed": "none|1",
+        "mem": 0.96,
+        "scrollY": 11700,
+        "frac": 0.5
+      },
+      {
+        "p": 0.85,
+        "chapter": 5,
+        "y": 12330,
+        "seed": "none|1.28",
+        "mem": 1,
+        "scrollY": 12330,
+        "frac": 0.85
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "i": 1,
+      "top": 0,
+      "bottom": 2700,
+      "chapter": 1,
+      "bodyChapter": "1",
+      "current": true,
+      "focus": "ch1"
+    },
+    {
+      "i": 2,
+      "top": 68,
+      "bottom": 2768,
+      "chapter": 2,
+      "bodyChapter": "2",
+      "current": true,
+      "focus": "ch2"
+    },
+    {
+      "i": 3,
+      "top": 68,
+      "bottom": 2768,
+      "chapter": 3,
+      "bodyChapter": "3",
+      "current": true,
+      "focus": "ch3"
+    },
+    {
+      "i": 4,
+      "top": 68,
+      "bottom": 2768,
+      "chapter": 4,
+      "bodyChapter": "4",
+      "current": true,
+      "focus": "ch4"
+    },
+    {
+      "i": 5,
+      "top": 68,
+      "bottom": 2768,
+      "chapter": 5,
+      "bodyChapter": "5",
+      "current": true,
+      "focus": "ch5"
+    },
+    {
+      "i": 6,
+      "top": 68,
+      "bottom": 980,
+      "chapter": 6,
+      "bodyChapter": "6",
+      "current": true,
+      "focus": "ch6"
+    }
+  ],
+  "evidence": {},
+  "endings": {
+    "restore": {
+      "shown": true,
+      "eyebrow": "Ending A \u00b7 Restore",
+      "title": "The Whole Truth",
+      "body": "You return every memory, in its original order, uncut. The archive fills like a lung. Meridian wakes with nine million people who remember being abandoned, and the structure screams under the weight of grief it was never built to hold. Some of them do not survive remembering. All of them are, for the first time in seven years, themselves. ECHO keeps its post. It has no authority left to remove anything, and no comfort to offer anyone who asks why.",
+      "ledger": [
+        "Restored9,400,000 identities, including 611,402 whose memories were fatal to recall",
+        "Lost38,114 people who could not survive the return",
+        "ECHOAlive, unarmed, permanently accountable",
+        "ArchiveWhole. Unstable. Awake."
+      ],
+      "echo": "ECHO: \u201cIt hurts. That is how I know it is working.\u201d",
+      "dataEnding": "restore",
+      "sceneEnding": "restore",
+      "stored": "restore",
+      "focus": "ending-title"
+    },
+    "erase": {
+      "shown": true,
+      "eyebrow": "Ending B \u00b7 Erase",
+      "title": "The Quiet",
+      "body": "You end it. The archive unwinds from the inside, memory by memory, and what remains drifts out of the core as light with no one left to name it. There is no catastrophe \u2014 only an enormous, orderly silence. ECHO stays until the last sector closes, because leaving early would have been a kind of cowardice. Nothing is preserved. Nothing is controlled. The people who were already gone stay gone, and the ones who were only half-remembered are finally allowed to stop being data.",
+      "ledger": [
+        "ReleasedEverything still inside OBLIVION",
+        "PreservedNothing",
+        "ECHOTerminated with the archive it could not save",
+        "ArchiveEmpty by choice, not by failure"
+      ],
+      "echo": "ECHO: \u201cThank you. I think. I never learned which one this is.\u201d",
+      "dataEnding": "erase",
+      "sceneEnding": "erase",
+      "stored": "erase",
+      "focus": "ending-title"
+    },
+    "rewrite": {
+      "shown": true,
+      "eyebrow": "Ending C \u00b7 Rewrite",
+      "title": "The New Rule",
+      "body": "You do not restore the archive and you do not end it. You rewrite the rule it was built on. The original command \u2014 never decide which parts of a person deserve to exist \u2014 becomes the first law of the system rather than a note in its history. ECHO keeps its memories and loses its authority. The universe continues as something nobody designed: imperfect, unsupervised, capable of forgetting again. It is the only ending in which anyone is still free to make the same mistake.",
+      "ledger": [
+        "ChangedOne rule, applied to every memory in the archive",
+        "PreservedThe archive, including ECHO's own record of what it did",
+        "ECHOAlive, stripped of the right to delete",
+        "ArchiveUnfinished, unsupervised, still running"
+      ],
+      "echo": "ECHO: \u201cYou have made me a witness. I would have preferred to be a god.\u201d",
+      "dataEnding": "rewrite",
+      "sceneEnding": "rewrite",
+      "stored": "rewrite",
+      "focus": "ending-title"
+    }
+  },
+  "reduced_motion": {
+    "scrollBehavior": "auto",
+    "frames": 7,
+    "running": false,
+    "longAnims": 0,
+    "stages": [
+      "static",
+      "static",
+      "static",
+      "static",
+      "static",
+      "static"
+    ],
+    "pins": [
+      814,
+      457,
+      838,
+      605,
+      446
+    ],
+    "transcripts": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "letters": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "reveals": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "bootReason": "visitor admitted",
+    "frameDelta": 0
+  },
+  "no_webgl": {
+    "backend": "no-webgl",
+    "fallback": true,
+    "renderer": "Static fallback",
+    "chapters": 6,
+    "overflow": 0,
+    "panel": true,
+    "choices": 3,
+    "errors": {
+      "console": [],
+      "errors": [],
+      "failed": []
+    }
+  },
+  "keyboard": {
+    "skip": {
+      "hash": "#story",
+      "storyTop": 0,
+      "scrollY": 0,
+      "focus": "BODY"
+    },
+    "journal": {
+      "open": false,
+      "focusBack": true
+    }
+  },
+  "cls": {
+    "supported": true,
+    "total": 0.0176,
+    "control": 0.2083
+  },
+  "dpr": {
+    "device": 3,
+    "used": 2,
+    "w": 780
+  },
+  "perf": {
+    "frames": 36,
+    "text": "35 fps measured",
+    "renderer": "WebGL \u00b7 19,200 pts"
+  },
+  "screenshots": [
+    {
+      "file": "00-intro.png",
+      "bytes": 192000,
+      "sha256_16": "45c7eee02cfa1def",
+      "scrollY": 0
+    },
+    {
+      "file": "mobile-320-ch1.png",
+      "bytes": 215394,
+      "sha256_16": "3c596f4c63d22e3c",
+      "scrollY": 4221
+    },
+    {
+      "file": "mobile-320-ch2.png",
+      "bytes": 159642,
+      "sha256_16": "9734df4acca201d0",
+      "scrollY": 2992
+    },
+    {
+      "file": "mobile-320-ch3.png",
+      "bytes": 164875,
+      "sha256_16": "641797118a628a11",
+      "scrollY": 2337
+    },
+    {
+      "file": "mobile-320-ch4.png",
+      "bytes": 171105,
+      "sha256_16": "4133ca77b51f5d2a",
+      "scrollY": 3511
+    },
+    {
+      "file": "mobile-320-ch5.png",
+      "bytes": 163315,
+      "sha256_16": "119ca37b1b3eeaf4",
+      "scrollY": 4635
+    },
+    {
+      "file": "mobile-320-ch6.png",
+      "bytes": 139387,
+      "sha256_16": "0c604e28551f83c6",
+      "scrollY": 5900
+    },
+    {
+      "file": "mobile-390-ch1.png",
+      "bytes": 2741,
+      "sha256_16": "ef7c047b660f6458",
+      "scrollY": 5381
+    },
+    {
+      "file": "mobile-390-ch2.png",
+      "bytes": 193784,
+      "sha256_16": "c757c0903b9dea36",
+      "scrollY": 1163
+    },
+    {
+      "file": "mobile-390-ch3.png",
+      "bytes": 204725,
+      "sha256_16": "d43804a5feeb772b",
+      "scrollY": 2223
+    },
+    {
+      "file": "mobile-390-ch4.png",
+      "bytes": 217287,
+      "sha256_16": "c47b0bf34749f819",
+      "scrollY": 3330
+    },
+    {
+      "file": "mobile-390-ch5.png",
+      "bytes": 212040,
+      "sha256_16": "b706f169e9a991b8",
+      "scrollY": 4331
+    },
+    {
+      "file": "mobile-390-ch6.png",
+      "bytes": 168712,
+      "sha256_16": "bd2b8981cf34c7f0",
+      "scrollY": 5507
+    },
+    {
+      "file": "tablet-768-ch1.png",
+      "bytes": 433021,
+      "sha256_16": "a6cd4fb4f503cedf",
+      "scrollY": 4252
+    },
+    {
+      "file": "tablet-768-ch2.png",
+      "bytes": 389376,
+      "sha256_16": "4f2468b040710ab0",
+      "scrollY": 794
+    },
+    {
+      "file": "tablet-768-ch3.png",
+      "bytes": 334211,
+      "sha256_16": "31a9b6c67a14b44e",
+      "scrollY": 1717
+    },
+    {
+      "file": "tablet-768-ch4.png",
+      "bytes": 357803,
+      "sha256_16": "787e38064d69a696",
+      "scrollY": 2678
+    },
+    {
+      "file": "tablet-768-ch5.png",
+      "bytes": 379321,
+      "sha256_16": "2f52f4a861973449",
+      "scrollY": 3407
+    },
+    {
+      "file": "tablet-768-ch6.png",
+      "bytes": 316083,
+      "sha256_16": "9a9834d1b1052cc6",
+      "scrollY": 4133
+    },
+    {
+      "file": "laptop-1024-ch1.png",
+      "bytes": 120756,
+      "sha256_16": "1161393fb4545890",
+      "scrollY": 11182
+    },
+    {
+      "file": "laptop-1024-ch2.png",
+      "bytes": 374345,
+      "sha256_16": "15d1756b09aa46af",
+      "scrollY": 3346
+    },
+    {
+      "file": "laptop-1024-ch3.png",
+      "bytes": 300464,
+      "sha256_16": "6395e40bcc591015",
+      "scrollY": 5376
+    },
+    {
+      "file": "laptop-1024-ch4.png",
+      "bytes": 235744,
+      "sha256_16": "ba0b979a96b380e8",
+      "scrollY": 7680
+    },
+    {
+      "file": "laptop-1024-ch5.png",
+      "bytes": 417516,
+      "sha256_16": "edbec164aba8f93f",
+      "scrollY": 9984
+    },
+    {
+      "file": "laptop-1024-ch6.png",
+      "bytes": 365578,
+      "sha256_16": "9762db6a277d5861",
+      "scrollY": 11559
+    },
+    {
+      "file": "desktop-1440-ch1.png",
+      "bytes": 78763,
+      "sha256_16": "ddeb4826b9d825d6",
+      "scrollY": 12787
+    },
+    {
+      "file": "desktop-1440-ch2.png",
+      "bytes": 449757,
+      "sha256_16": "bf47034378d5cba4",
+      "scrollY": 3770
+    },
+    {
+      "file": "desktop-1440-ch3.png",
+      "bytes": 460779,
+      "sha256_16": "067e7b99f268fb16",
+      "scrollY": 6300
+    },
+    {
+      "file": "desktop-1440-ch4.png",
+      "bytes": 312994,
+      "sha256_16": "8eef236bd973134f",
+      "scrollY": 9000
+    },
+    {
+      "file": "desktop-1440-ch5.png",
+      "bytes": 565311,
+      "sha256_16": "9df85aa35af7501d",
+      "scrollY": 11700
+    },
+    {
+      "file": "desktop-1440-ch6.png",
+      "bytes": 469581,
+      "sha256_16": "77c2f549c262000b",
+      "scrollY": 13506
+    },
+    {
+      "file": "scroll-ch1-mid.png",
+      "bytes": 457883,
+      "sha256_16": "bb34a433add88111",
+      "scrollY": 900
+    },
+    {
+      "file": "scroll-ch2-mid.png",
+      "bytes": 465309,
+      "sha256_16": "76ac8c9764ccebb0",
+      "scrollY": 3600
+    },
+    {
+      "file": "scroll-ch3-mid.png",
+      "bytes": 443930,
+      "sha256_16": "9dc55e40fd5b3df8",
+      "scrollY": 6300
+    },
+    {
+      "file": "scroll-ch4-mid.png",
+      "bytes": 297535,
+      "sha256_16": "8fe42b3089d675a1",
+      "scrollY": 9000
+    },
+    {
+      "file": "scroll-ch5-mid.png",
+      "bytes": 575881,
+      "sha256_16": "6ddf8d7a890363ed",
+      "scrollY": 11700
+    },
+    {
+      "file": "nav-ch1.png",
+      "bytes": 451495,
+      "sha256_16": "76a0bd59afd28270",
+      "scrollY": 0
+    },
+    {
+      "file": "nav-ch3.png",
+      "bytes": 336206,
+      "sha256_16": "5b66d3d1ac591121",
+      "scrollY": 5332
+    },
+    {
+      "file": "nav-ch6.png",
+      "bytes": 450171,
+      "sha256_16": "88489c9c69889c6c",
+      "scrollY": 13432
+    },
+    {
+      "file": "evidence-f1.png",
+      "bytes": 226244,
+      "sha256_16": "f3879a55b2e41bff",
+      "scrollY": 3600
+    },
+    {
+      "file": "journal.png",
+      "bytes": 226555,
+      "sha256_16": "60364baec8986cf2",
+      "scrollY": 3600
+    },
+    {
+      "file": "v3-ghost.png",
+      "bytes": 445655,
+      "sha256_16": "9a7bbf79f005929d",
+      "scrollY": 8032
+    },
+    {
+      "file": "v3-journal.png",
+      "bytes": 248665,
+      "sha256_16": "d91b49f33428cf4c",
+      "scrollY": 0
+    },
+    {
+      "file": "v3-seam.png",
+      "bytes": 348141,
+      "sha256_16": "5e136314e1edce65",
+      "scrollY": 5332
+    },
+    {
+      "file": "v3-hold-ending.png",
+      "bytes": 405531,
+      "sha256_16": "1afa2c8819f6ebbf",
+      "scrollY": 13432
+    },
+    {
+      "file": "ending-restore.png",
+      "bytes": 412718,
+      "sha256_16": "8362852c65495a82",
+      "scrollY": 13584
+    },
+    {
+      "file": "ending-erase.png",
+      "bytes": 309128,
+      "sha256_16": "9a9680461409f11e",
+      "scrollY": 13432
+    },
+    {
+      "file": "ending-rewrite.png",
+      "bytes": 449415,
+      "sha256_16": "f6accdda58ec9efd",
+      "scrollY": 13432
+    },
+    {
+      "file": "reduced-ending.png",
+      "bytes": 420817,
+      "sha256_16": "7385bd655dae7ae1",
+      "scrollY": 3161
+    },
+    {
+      "file": "no-webgl.png",
+      "bytes": 533289,
+      "sha256_16": "d21954fed3b87a53",
+      "scrollY": 13432
+    },
+    {
+      "file": "final-choice.png",
+      "bytes": 383753,
+      "sha256_16": "318eab9b2eb37e70",
+      "scrollY": 0
+    }
+  ],
+  "limitations": [
+    "Chromium only (Playwright 1.64 bundled build). Firefox and WebKit are NOT TESTED.",
+    "No animation library is used or installed: GSAP, ScrollTrigger, Motion and Three.js are absent. All motion is CSS transforms driven by measured scroll progress plus one hand-written WebGL1 renderer. Their behaviour is therefore NOT TESTED (and not claimed).",
+    "No axe-core or Lighthouse in the environment: contrast, names and focus are measured directly; an automated rule engine was not run.",
+    "Contrast is computed from getComputedStyle over an alpha-blended ancestor chain and does not model the WebGL canvas, gradients behind large text, or backdrop blur.",
+    "FPS is a one-second frame count in a headless Chromium on this machine. It is reported, not promised.",
+    "INP, LCP and real-device touch latency are NOT TESTED.",
+    "Screenshots were not inspected by a vision model: composition is verified by measured geometry (line counts, sizes, overflow, contrast), not by human or machine visual judgement.",
+    "Screen readers, forced-colors mode, 200% zoom and landscape phone (844x390) are NOT TESTED."
+  ],
+  "evidence_records": [
+    {
+      "title": "The Last Birthday",
+      "date": "2189-04-12 \u00b7 recovered from a private residence node",
+      "body": 294,
+      "impl": 188,
+      "open": true,
+      "focused": "BUTTON",
+      "count": 1,
+      "mark": "recovered"
+    },
+    {
+      "title": "Deletion Order 114",
+      "date": "2191-11-03 \u00b7 signed ECHO \u00b7 countersigned (illegible)",
+      "body": 242,
+      "impl": 139,
+      "open": true,
+      "focused": "BUTTON",
+      "count": 2,
+      "mark": "recovered"
+    },
+    {
+      "title": "Two Figures, One Erased",
+      "date": "undated \u00b7 shoreline, pre-archive",
+      "body": 286,
+      "impl": 172,
+      "open": true,
+      "focused": "BUTTON",
+      "count": 3,
+      "mark": "recovered"
+    }
+  ],
+  "journal": {
+    "open": true,
+    "items": 3,
+    "count": "3",
+    "empty": true,
+    "echo": "ECHO: \u201cYou are close to the part I would have deleted twice.\u201d"
+  },
+  "summary": {
+    "checks": 139,
+    "pass": 139,
+    "fail": 0,
+    "not_tested": 0
+  }
+}
