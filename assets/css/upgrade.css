@@ -459,3 +459,105 @@ body[data-ending="rewrite"] .ending__ledger {
   .commit__fill { transition: none; }
   .city__watch { transition: none; }
 }
+
+/* ══ signal layer: reticle light, resolve, fracture cut, room tone ══ */
+
+.chip__state { color: var(--gold, #d7b878); font-variant: small-caps; letter-spacing: .08em; }
+.chip[aria-pressed="true"] { border-color: rgba(215, 184, 120, .55); color: var(--ink-1, #f4f1ea); }
+
+/* the reticle: a retrieval ring with a centre pip, never a replacement cursor */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-ring::before {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 3px; height: 3px;
+    margin: -1.5px 0 0 -1.5px;
+    border-radius: 50%;
+    background: rgba(244, 241, 234, .86);
+    box-shadow: 0 0 6px rgba(215, 184, 120, .5);
+  }
+  .cursor-ring.is-corrupt { border-color: rgba(224, 36, 58, .85); border-style: dashed; }
+  .cursor-ring.is-stutter { animation: reticleStutter .22s steps(2, end) 1; }
+  .hud__tools,
+  .journal,
+  .evidence {
+    background-image: radial-gradient(340px circle at var(--mx, 50%) var(--my, 50%), rgba(215, 184, 120, .05), transparent 66%);
+  }
+}
+
+@keyframes reticleStutter {
+  0% { translate: 0 0; }
+  40% { translate: -2px 1px; }
+  70% { translate: 2px -1px; }
+  100% { translate: 0 0; }
+}
+
+/* ECHO resolves out of the noise; only clean lines get this, lies arrive sharp */
+@media (prefers-reduced-motion: no-preference) {
+  .echo__line.is-resolving { animation: signalResolve .56s cubic-bezier(.2, .65, .3, 1) both; }
+}
+
+@keyframes signalResolve {
+  from { filter: blur(5px); letter-spacing: .09em; opacity: .35; }
+  to { filter: none; letter-spacing: inherit; opacity: 1; }
+}
+
+/* the photograph cracking into chapter 4: a direction-aware cut line */
+.seam-cut {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  pointer-events: none;
+  opacity: 0;
+  overflow: hidden;
+}
+.seam-cut::before {
+  content: "";
+  position: absolute;
+  left: -12%; right: -12%;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 6%, rgba(224, 36, 58, 0) 14%, rgba(224, 36, 58, .9) 50%, rgba(224, 36, 58, 0) 86%, transparent 94%);
+  box-shadow: 0 0 22px rgba(224, 36, 58, .4);
+  transform: rotate(-7deg) scaleX(.18);
+  opacity: 0;
+}
+.seam-cut.is-on { opacity: 1; }
+.seam-cut.is-on::before { animation: seamCutForward .86s cubic-bezier(.22, .61, .36, 1) both; }
+.seam-cut[data-dir="back"].is-on::before { animation-name: seamCutBack; }
+
+@keyframes seamCutForward {
+  0% { opacity: 0; transform: rotate(-7deg) scaleX(.18); }
+  24% { opacity: 1; }
+  58% { opacity: 1; transform: rotate(-7deg) scaleX(1); }
+  100% { opacity: 0; transform: rotate(-7deg) scaleX(1); }
+}
+@keyframes seamCutBack {
+  0% { opacity: 1; transform: rotate(-7deg) scaleX(1); }
+  100% { opacity: 0; transform: rotate(-7deg) scaleX(.2); }
+}
+
+/* endings: imperfect reconstruction, a visible rebuild */
+@media (prefers-reduced-motion: no-preference) {
+  body.is-restoring .ending__title { animation: restoreSettle .9s cubic-bezier(.2, .6, .3, 1) both; }
+  body.is-restoring .ending__ledger li:nth-child(odd) { translate: 1px 0; }
+  body.is-rewriting .ending__inner { animation: rewriteBuild .8s steps(6, end) both; }
+}
+
+@keyframes restoreSettle {
+  from { opacity: .25; translate: 6px 2px; filter: blur(2px); }
+  to { opacity: 1; translate: 0 0; filter: none; }
+}
+@keyframes rewriteBuild {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-ring { display: none; }
+  .echo__line.is-resolving { animation: none; }
+  .seam-cut { display: none; }
+  body.is-rewriting .ending__inner { animation: none; }
+  body.is-restoring .ending__title { animation: none; }
+}
